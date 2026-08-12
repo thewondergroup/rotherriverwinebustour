@@ -33,21 +33,19 @@
     nav .cta-nav:hover { background: var(--gold-light); }
 
     /* HERO */
-    .hero { min-height: 70vh; background: linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 40%, var(--green) 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 24px 60px; }
-    .hero-content { max-width: 800px; }
+    .hero { min-height: 100vh; background: linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 40%, var(--green) 100%); display: flex; align-items: center; padding: 100px 24px 60px; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; width: 100%; }
+    .hero-video-wrap video { width: 100%; max-height: 75vh; object-fit: contain; background: transparent; border-radius: 4px; }
     .hero-eyebrow { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; font-weight: 500; }
-    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 8vw, 72px); color: white; font-weight: 400; line-height: 1.15; margin-bottom: 24px; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); color: white; font-weight: 400; line-height: 1.15; margin-bottom: 24px; }
     .hero h1 em { font-style: italic; color: var(--gold); }
-    .hero-sub { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 520px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-sub { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 520px; line-height: 1.7; margin-bottom: 36px; }
     .hero-price { display: inline-flex; align-items: baseline; gap: 12px; border: 1px solid var(--gold); padding: 14px 36px; margin-bottom: 32px; }
     .hero-price .amount { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: white; font-weight: 700; }
     .hero-price .detail { font-size: 14px; color: var(--gold); letter-spacing: 1px; }
+    .hero-mobile-cta { display: none; }
     .cta-primary { display: inline-block; background: var(--gold); color: white; text-decoration: none; padding: 18px 48px; font-size: 16px; font-weight: 600; letter-spacing: 1px; transition: all 0.3s; }
     .cta-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-
-    /* FEATURED VIDEO */
-    .featured-video { background: black; padding: 0; }
-    .featured-video video { width: 100%; max-height: 80vh; display: block; margin: 0 auto; }
 
     /* SECTIONS */
     section { padding: 80px 24px; }
@@ -111,11 +109,11 @@
     .review-card video { width: 240px; height: 426px; object-fit: cover; background: black; }
 
     /* PRESS */
-    .press-section { background: var(--cream); text-align: center; padding: 60px 24px; }
-    .press-quotes { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
-    .press-quote { max-width: 380px; }
-    .press-source { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; font-weight: 600; }
-    .press-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--charcoal); font-style: italic; line-height: 1.5; }
+    .press-section { background: var(--warm); text-align: center; padding: 48px 24px; }
+    .press-bar { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+    .press-item { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 380px; }
+    .press-logo { height: 40px; opacity: 0.7; }
+    .press-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--charcoal); font-style: italic; line-height: 1.5; }
 
     /* SHIPPING */
     .shipping-strip { background: white; padding: 48px 24px; text-align: center; }
@@ -136,6 +134,20 @@
     /* RESPONSIVE */
     @media (max-width: 768px) {
       section { padding: 60px 20px; }
+      .hero { min-height: auto; padding: 80px 20px 40px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+      .hero-inner .hero-content { order: 1; }
+      .hero-inner .hero-video-wrap { order: 2; }
+      .hero-eyebrow { margin-bottom: 16px; font-size: 11px; }
+      .hero h1 { font-size: 32px; margin-bottom: 16px; }
+      .hero h1 br { display: none; }
+      .hero-sub { display: none; }
+      .hero-price { margin-bottom: 0; padding: 10px 24px; }
+      .hero-price .amount { font-size: 36px; }
+      .hero-content .cta-primary { display: none; }
+      .hero-mobile-cta { display: block; order: 3; text-align: center; padding-top: 20px; }
+      .hero-mobile-cta .cta-primary { display: inline-block; width: 100%; padding: 16px; font-size: 15px; }
+      .hero-video-wrap video { max-height: 55vh; width: 100%; }
       .value-grid { grid-template-columns: repeat(2, 1fr); }
       .value-item:nth-child(2n) { border-right: none; }
       .value-item:nth-child(n+5) { border-bottom: none; }
@@ -169,25 +181,28 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="hero-eyebrow">Sussex Wine Country</div>
-      <h1>Three vineyards. Twelve tastings.<br>One <em>very good</em> day.</h1>
-      <p class="hero-sub">The Rother Wine Triangle bus tour takes you to three award-winning vineyards in the Sussex countryside. Everything included. Just turn up.</p>
-      <div class="hero-price">
-        <div class="amount">£130</div>
-        <div class="detail">per person · everything included</div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Sussex Wine Country</div>
+        <h1>Three vineyards. Twelve tastings.<br>One <em>very good</em> day.</h1>
+        <p class="hero-sub">The Rother Wine Triangle bus tour takes you to three award-winning vineyards in the Sussex countryside. Everything included. Just turn up.</p>
+        <div class="hero-price">
+          <div class="amount">£130</div>
+          <div class="detail">per person · everything included</div>
+        </div>
+        <br>
+        <a href="#tours" class="cta-primary">See Dates &amp; Book</a>
       </div>
-      <br>
-      <a href="#tours" class="cta-primary">See Dates &amp; Book</a>
+      <div class="hero-video-wrap">
+        <video controls playsinline preload="metadata">
+          <source src="assets/tour-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-mobile-cta">
+        <a href="#tours" class="cta-primary">See Dates &amp; Book</a>
+      </div>
     </div>
   </section>
-
-  <!-- FEATURED VIDEO -->
-  <div class="featured-video">
-    <video controls playsinline preload="metadata">
-      <source src="assets/tour-video.mp4" type="video/mp4">
-    </video>
-  </div>
 
   <!-- WHAT YOU GET + HOW IT WORKS (combined) -->
   <section class="value-section">
@@ -246,6 +261,20 @@
           <div class="journey-step-label">Home by teatime</div>
           <div class="journey-step-desc">Dropped back at the station</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section class="press-section">
+    <div class="press-bar">
+      <div class="press-item">
+        <img class="press-logo" src="assets/the-times-logo.png" alt="The Times" loading="lazy">
+        <div class="press-text">Two Rother Valley vineyards named among the UK's 25 best vineyard stays</div>
+      </div>
+      <div class="press-item">
+        <img class="press-logo" src="assets/cityam-logo.png" alt="City AM" loading="lazy">
+        <div class="press-text">Sussex has become the UK's first wine-specific Protected Designation of Origin, similar to Champagne</div>
       </div>
     </div>
   </section>
@@ -403,20 +432,6 @@
         <div class="review-card"><video controls playsinline preload="metadata"><source src="assets/influencer-3.mp4" type="video/mp4"></video></div>
         <div class="review-card"><video controls playsinline preload="metadata"><source src="assets/influencer-5.mp4" type="video/mp4"></video></div>
         <div class="review-card"><video controls playsinline preload="metadata"><source src="assets/influencer-6.mp4" type="video/mp4"></video></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRESS + SHIPPING -->
-  <section class="press-section">
-    <div class="press-quotes">
-      <div class="press-quote">
-        <div class="press-source">The Times</div>
-        <div class="press-text">Two Rother Valley vineyards named among the UK's 25 best vineyard stays</div>
-      </div>
-      <div class="press-quote">
-        <div class="press-source">City AM</div>
-        <div class="press-text">Sussex has become the UK's first wine-specific Protected Designation of Origin, similar to Champagne</div>
       </div>
     </div>
   </section>
