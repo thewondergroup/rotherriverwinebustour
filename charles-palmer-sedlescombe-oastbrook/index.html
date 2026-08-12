@@ -21,6 +21,13 @@
     .nav-links{display:flex;align-items:center;gap:24px}
     .nav-link{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:500;transition:color .3s}
     .nav-link:hover{color:white}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#014850;z-index:200;flex-direction:column;justify-content:center;align-items:center;opacity:0;transition:opacity .3s ease}
+    .mobile-menu.open{opacity:1}
+    .mobile-menu a{display:block;color:white;text-decoration:none;padding:16px 0;font-family:'Cormorant Garamond',serif;font-size:28px;text-align:center;transition:color .2s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .mobile-menu .menu-close{position:absolute;top:16px;right:20px;background:none;border:none;color:white;font-size:32px;cursor:pointer;padding:8px;line-height:1}
+    .mobile-menu .menu-close:hover{color:var(--gold)}
+    .mobile-menu .menu-divider{width:40px;height:1px;background:var(--gold);margin:8px auto}
     .route-hero{background:linear-gradient(160deg,var(--teal) 0%,var(--green) 100%);padding:120px 24px 80px;text-align:center}
     .route-hero-inner{max-width:800px;margin:0 auto}
     .route-eyebrow{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500}
