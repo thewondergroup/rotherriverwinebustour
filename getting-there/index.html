@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting There | Rother Wine Triangle Bus Tour</title>
+  <meta name="description" content="How to get to the Rother Wine Triangle bus tour. Just over an hour from London by train. We pick you up at the station and drop you back.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --teal:#015B64; --teal-dark:#014850; --gold:#C4A35A; --gold-light:#D4B76A; --cream:#FAF7F2; --warm:#F0EBE3; --charcoal:#2C2C2C; --green:#2D4A3E; --muted:#7A7468; --border:#E0D8CC; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;color:var(--charcoal);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(1,91,100,0.95);backdrop-filter:blur(10px);padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+    nav .logo{font-family:'Cormorant Garamond',serif;color:white;font-size:19px;font-weight:700;letter-spacing:1px;text-decoration:none}
+    nav .logo span{color:var(--gold)}
+    nav .cta-nav{background:var(--gold);color:white;text-decoration:none;padding:10px 24px;font-size:14px;font-weight:600;letter-spacing:.5px;transition:background .3s}
+    nav .cta-nav:hover{background:var(--gold-light)}
+
+    .page-hero{background:linear-gradient(160deg,var(--teal) 0%,var(--green) 100%);padding:120px 24px 80px;text-align:center}
+    .page-hero-inner{max-width:700px;margin:0 auto}
+    .page-eyebrow{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500}
+    .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,52px);color:white;font-weight:400;line-height:1.2;margin-bottom:20px}
+    .page-hero-sub{font-size:17px;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto;line-height:1.7}
+
+    .container{max-width:800px;margin:0 auto}
+    section{padding:80px 24px}
+    .section-eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:500}
+
+    /* JOURNEY STEPS */
+    .journey-section{background:white;padding:80px 24px}
+    .step-row{display:grid;grid-template-columns:80px 1fr;gap:24px;margin-bottom:48px;align-items:start}
+    .step-num{font-family:'Cormorant Garamond',serif;font-size:48px;color:var(--border);font-weight:700;line-height:1;text-align:center;padding-top:4px}
+    .step-title{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--teal);margin-bottom:8px}
+    .step-body{font-size:15px;color:var(--muted);line-height:1.7}
+
+    /* STATIONS */
+    .stations-section{background:var(--teal);color:white;padding:80px 24px}
+    .stations-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,44px);color:white;text-align:center;margin-bottom:48px}
+    .station-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:0 auto}
+    .station-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:32px}
+    .station-name{font-family:'Cormorant Garamond',serif;font-size:26px;color:white;margin-bottom:4px}
+    .station-line{font-size:13px;color:var(--gold);margin-bottom:20px}
+    .station-detail{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+    .station-detail:last-child{border-bottom:none}
+    .station-label{font-size:14px;color:rgba(255,255,255,.5)}
+    .station-value{font-size:14px;color:white;font-weight:600}
+    .station-routes{margin-top:20px;padding-top:16px;border-top:1px solid rgba(196,163,90,.3)}
+    .station-routes-label{font-size:12px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+    .station-routes-list{font-size:14px;color:rgba(255,255,255,.65);line-height:1.8}
+
+    /* DRIVING */
+    .driving-section{background:var(--warm);padding:60px 24px}
+    .driving-inner{max-width:800px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .driving-title{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--teal);margin-bottom:16px}
+    .driving-body{font-size:15px;color:var(--muted);line-height:1.7}
+    .driving-tip{margin-top:16px;font-size:14px;color:var(--teal);font-weight:600;padding:12px 16px;background:rgba(1,91,100,.06);border-left:3px solid var(--gold)}
+
+    /* TIPS */
+    .tips-section{background:white;padding:80px 24px}
+    .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:800px;margin:0 auto}
+    .tip{padding:24px;border:1px solid var(--border)}
+    .tip-title{font-size:16px;font-weight:600;color:var(--charcoal);margin-bottom:8px}
+    .tip-body{font-size:14px;color:var(--muted);line-height:1.6}
+
+    /* CTA */
+    .cta-primary{display:inline-block;background:var(--gold);color:white;text-decoration:none;padding:18px 48px;font-size:16px;font-weight:600;letter-spacing:1px;transition:all .3s}
+    .cta-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+    .page-cta{background:linear-gradient(160deg,var(--teal) 0%,var(--green) 100%);text-align:center;padding:80px 24px}
+    .page-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);color:white;margin-bottom:16px}
+    .page-cta p{color:rgba(255,255,255,.6);font-size:16px;margin-bottom:28px}
+
+    .back-link{display:block;text-align:center;padding:24px;font-size:14px;color:var(--teal);text-decoration:none;background:var(--cream);border-top:1px solid var(--border)}
+    .back-link:hover{color:var(--gold)}
+
+    footer{background:var(--charcoal);color:rgba(255,255,255,.5);padding:32px 24px;text-align:center;font-size:13px}
+    footer a{color:var(--gold);text-decoration:none}
+
+    @media(max-width:768px){
+      section{padding:60px 20px}
+      .station-cards{grid-template-columns:1fr}
+      .driving-inner{grid-template-columns:1fr}
+      .tips-grid{grid-template-columns:1fr}
+      .step-row{grid-template-columns:60px 1fr;gap:16px}
+      nav .logo{font-size:15px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta-primary:hover{transform:none}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../" class="logo">Rother <span>Wine Triangle</span> Bus Tour</a>
+    <a href="../#tours" class="cta-nav">Book a Tour</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow">Getting there</div>
+      <h1>An hour from London. We do the rest.</h1>
+      <p class="page-hero-sub">Catch the train, step off at the station, and we pick you up. At the end of the day, we drop you back in time for your train home.</p>
+    </div>
+  </section>
+
+  <!-- HOW YOUR DAY WORKS -->
+  <section class="journey-section">
+    <div class="container">
+      <div class="section-eyebrow">Your day, step by step</div>
+
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Catch the train from London</div>
+          <div class="step-body">Most tours depart from Robertsbridge Station, which is on the Charing Cross/London Bridge to Hastings line. The journey takes about 1 hour 15 minutes. One route departs from Rye Station instead, on the St Pancras/Victoria line, taking about 1 hour 6 minutes. Check your tour for which station.</div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Step off and onto the bus</div>
+          <div class="step-body">Our luxury air-conditioned bus will be waiting at the station when you arrive. No taxis, no transfers, no waiting around. You step off the train and straight onto the bus. Your day has begun.</div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Three vineyards, four hours</div>
+          <div class="step-body">The bus takes you to three vineyards, spending time at each one. You'll taste four wines at every stop, guided by the winemakers themselves. Lunch is at the second vineyard - a Sussex cheese and charcuterie spread with wine pairings. Between vineyards, sit back and enjoy the rolling Sussex countryside from the bus.</div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">Back to the station</div>
+          <div class="step-body">At the end of the day, the bus drops you back at the same station in time for your return train to London. You'll be home by early evening, with (hopefully) a few bottles of wine to show for it.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TWO STATIONS -->
+  <section class="stations-section">
+    <h2>Two departure points</h2>
+    <div class="station-cards">
+
+      <div class="station-card">
+        <div class="station-name">Robertsbridge Station</div>
+        <div class="station-line">Charing Cross / London Bridge to Hastings line</div>
+        <div class="station-detail"><span class="station-label">Journey time</span><span class="station-value">Approx 1hr 15min</span></div>
+        <div class="station-detail"><span class="station-label">Arrive</span><span class="station-value">11:05</span></div>
+        <div class="station-detail"><span class="station-label">Return train</span><span class="station-value">16:08</span></div>
+        <div class="station-routes">
+          <div class="station-routes-label">Routes from this station</div>
+          <div class="station-routes-list">
+            Oxney, Tillingham &amp; Sedlescombe<br>
+            Oastbrook, Oxney &amp; Charles Palmer<br>
+            Sedlescombe, Charles Palmer &amp; Tillingham<br>
+            Mountfield, Oastbrook &amp; Oxney<br>
+            Oastbrook, Tillingham &amp; Charles Palmer
+          </div>
+        </div>
+      </div>
+
+      <div class="station-card">
+        <div class="station-name">Rye Station</div>
+        <div class="station-line">St Pancras / Victoria to Rye (Southern Railways)</div>
+        <div class="station-detail"><span class="station-label">Journey time</span><span class="station-value">From 1hr 6min</span></div>
+        <div class="station-detail"><span class="station-label">Arrive</span><span class="station-value">10:46</span></div>
+        <div class="station-detail"><span class="station-label">Return train</span><span class="station-value">15:48</span></div>
+        <div class="station-routes">
+          <div class="station-routes-label">Routes from this station</div>
+          <div class="station-routes-list">
+            Charles Palmer, Sedlescombe &amp; Oastbrook
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section style="padding:0;background:var(--charcoal)">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80000!2d0.55!3d50.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df17887c88a121%3A0xd3ff5915bf970629!2sOastbrook%20Estate%20Vineyard!5e0!3m2!1sen!2suk!4v1" 
+      width="100%" height="450" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <!-- DRIVING -->
+  <section class="driving-section">
+    <div class="driving-inner">
+      <div>
+        <div class="driving-title">Can I drive instead?</div>
+        <div class="driving-body">The bus picks up and drops off at the station, so the train is the easiest way to enjoy the full day and all 12 tastings without worrying about driving. If you do prefer to drive, you can arrange to meet the bus at the first vineyard. Please contact us in advance so we can confirm the meeting point.</div>
+        <div class="driving-tip">Our recommendation: take the train. It's part of the experience, and you can enjoy every glass.</div>
+      </div>
+      <div>
+        <div class="driving-title">Buying a train ticket</div>
+        <div class="driving-body">You can buy tickets on the day at the station, but booking in advance is usually cheaper. Check <strong>National Rail</strong> or <strong>Trainline</strong> for the best fares. An off-peak return from London to Robertsbridge is typically around £20-25.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICAL TIPS -->
+  <section class="tips-section">
+    <div class="container">
+      <div class="section-eyebrow" style="text-align:center">Before you go</div>
+      <div style="height:32px"></div>
+      <div class="tips-grid">
+        <div class="tip">
+          <div class="tip-title">What to wear</div>
+          <div class="tip-body">Smart casual is perfect. You'll be walking around vineyards so comfortable shoes are a good idea, but it's not a hike. Bring a light jacket in case the weather turns.</div>
+        </div>
+        <div class="tip">
+          <div class="tip-title">What to bring</div>
+          <div class="tip-body">Just yourself and a card for buying wine. Everything else is taken care of. A bag for carrying bottles between vineyards is handy but not essential.</div>
+        </div>
+        <div class="tip">
+          <div class="tip-title">Buying wine on the day</div>
+          <div class="tip-body">You can buy bottles at every vineyard. Carry them on the bus between stops. Buy six or more at any single vineyard and they'll ship them all home for free.</div>
+        </div>
+        <div class="tip">
+          <div class="tip-title">Weather</div>
+          <div class="tip-body">Tours run rain or shine. Tastings happen indoors, and the bus is air-conditioned. The Rother Valley gets some of the highest sunshine hours in England, so chances are you'll be lucky.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="page-cta">
+    <h2>Ready to book?</h2>
+    <p>Pick a date and we'll see you at the station.</p>
+    <a href="../#tours" class="cta-primary">See Dates &amp; Book</a>
+  </section>
+
+  <a href="../" class="back-link">&larr; Back to all tours</a>
+
+  <footer>
+    <p>Rother Wine Triangle &middot; East Sussex &middot; <a href="https://www.instagram.com/rotherriverwine/" target="_blank">@rotherriverwine</a></p>
+  </footer>
+
+</body>
+</html>
