@@ -3,115 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rother Wine Triangle Bus Tour | Sussex Wine Country</title>
-  <meta name="description" content="Three vineyards. 12 tastings. One very good day in Sussex. Bus tours every Sunday, August to October. £130 per person, everything included.">
+  <title>Rother Wine Triangle Bus Tour | London's Wine Country Day Trip</title>
+  <meta name="description" content="Three vineyards. 12 tastings. One very good day. Train from London, private bus between vineyards, lunch included. £130. Every Sunday, June to October.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --teal:#015B64; --teal-dark:#014850; --gold:#C4A35A; --gold-light:#D4B76A; --cream:#FAF7F2; --warm:#F0EBE3; --charcoal:#2C2C2C; --green:#2D4A3E; --muted:#7A7468; --border:#E0D8CC; }
+    :root{--teal:#015B64;--teal-dark:#014850;--gold:#C4A35A;--gold-light:#D4B76A;--cream:#FAF7F2;--warm:#F0EBE3;--charcoal:#2C2C2C;--green:#2D4A3E;--muted:#7A7468;--border:#E0D8CC}
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{font-family:'DM Sans',sans-serif;color:var(--charcoal);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
 
     /* NAV */
-    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(1,91,100,0.95);backdrop-filter:blur(10px);padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
-    nav .logo{font-family:'Cormorant Garamond',serif;color:white;font-size:19px;font-weight:700;letter-spacing:1px}
+    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(1,91,100,.95);backdrop-filter:blur(10px);padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+    nav .logo{font-family:'Cormorant Garamond',serif;color:white;font-size:19px;font-weight:700;letter-spacing:1px;text-decoration:none}
     nav .logo span{color:var(--gold)}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-link{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:500;transition:color .3s}
+    .nav-link:hover{color:white}
     nav .cta-nav{background:var(--gold);color:white;text-decoration:none;padding:10px 24px;font-size:14px;font-weight:600;letter-spacing:.5px;transition:background .3s}
     nav .cta-nav:hover{background:var(--gold-light)}
 
-    /* HERO */
+    /* 1. HERO */
     .hero{min-height:100vh;background:linear-gradient(160deg,var(--teal) 0%,var(--teal-dark) 40%,var(--green) 100%);display:flex;align-items:center;padding:100px 24px 60px}
     .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;width:100%}
     .hero-video-wrap{position:relative;overflow:hidden;min-height:600px}
     .hero-video-wrap video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
-    .hero-eyebrow{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:32px;font-weight:500}
-    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);color:white;font-weight:400;line-height:1.15;margin-bottom:24px}
+    .hero-kicker{font-size:15px;color:var(--gold);margin-bottom:24px;font-weight:500}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);color:white;font-weight:400;line-height:1.15;margin-bottom:24px}
     .hero h1 em{font-style:italic;color:var(--gold)}
-    .hero-sub{font-size:17px;color:rgba(255,255,255,.7);max-width:520px;line-height:1.7;margin-bottom:36px}
-    .hero-price{display:inline-flex;align-items:baseline;gap:12px;border:1px solid var(--gold);padding:14px 36px;margin-bottom:32px}
-    .hero-price .amount{font-family:'Cormorant Garamond',serif;font-size:44px;color:white;font-weight:700}
-    .hero-price .detail{font-size:14px;color:var(--gold);letter-spacing:1px}
-    .hero-mobile-cta{display:none}
+    .hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,30px);color:rgba(255,255,255,.8);margin-bottom:32px;line-height:1.4}
+    .hero-detail{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:36px;line-height:1.7}
+    .hero-price-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+    .hero-price{font-family:'Cormorant Garamond',serif;font-size:48px;color:white;font-weight:700}
+    .hero-price-note{font-size:14px;color:var(--gold);letter-spacing:1px}
     .cta-primary{display:inline-block;background:var(--gold);color:white;text-decoration:none;padding:18px 48px;font-size:16px;font-weight:600;letter-spacing:1px;transition:all .3s}
     .cta-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+    .hero-mobile-cta{display:none}
 
-    /* URGENCY BANNER */
-    .urgency-banner{background:var(--gold);padding:16px 24px;text-align:center;display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap}
-    .urgency-text{font-family:'Cormorant Garamond',serif;font-size:22px;color:white;font-weight:600}
-    .urgency-cta{background:var(--teal);color:white;text-decoration:none;padding:10px 28px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:background .3s}
-    .urgency-cta:hover{background:var(--teal-dark)}
+    /* 2. JOURNEY PROPOSITION */
+    .journey-section{background:white;padding:60px 24px;text-align:center}
+    .journey-flow{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;max-width:900px;margin:0 auto 20px}
+    .journey-node{font-size:15px;font-weight:600;color:var(--teal);padding:12px 20px;background:var(--cream);border-radius:0}
+    .journey-node.highlight{background:var(--teal);color:white;padding:16px 24px;font-size:16px}
+    .journey-arr{color:var(--gold);font-size:16px}
+    .journey-note{font-size:14px;color:var(--muted);max-width:500px;margin:0 auto}
 
-    /* SECTIONS */
-    section{padding:80px 24px}
-    .container{max-width:1100px;margin:0 auto}
-    .section-eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:500}
-    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,48px);color:var(--teal);font-weight:400;line-height:1.2;margin-bottom:24px}
+    /* 3. VIDEO */
+    .video-full{background:black;padding:0}
+    .video-full video{width:100%;max-height:70vh;display:block;margin:0 auto;object-fit:cover}
 
-    /* VALUE */
-    .value-section{background:var(--teal);padding:80px 24px}
-    .value-section .section-eyebrow{color:var(--gold)}
-    .value-section .section-title{color:white}
-    .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:48px}
-    .value-item{padding:40px 28px;background:rgba(255,255,255,.05);position:relative;transition:background .3s}
-    .value-item:hover{background:rgba(255,255,255,.1)}
-    .value-number{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:12px}
-    .value-label{font-size:16px;font-weight:600;color:white;margin-bottom:8px}
-    .value-desc{font-size:14px;color:rgba(255,255,255,.55);line-height:1.6}
-    .journey-strip{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
-    .journey-step{text-align:center;padding:0 16px}
-    .journey-step-label{font-size:13px;font-weight:600;color:var(--gold)}
-    .journey-step-desc{font-size:12px;color:rgba(255,255,255,.5)}
-    .journey-arrow{color:var(--gold);font-size:18px}
+    /* 4. INCLUDES */
+    .includes-section{background:var(--cream);padding:80px 24px}
+    .includes-section .section-eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;font-weight:500}
+    .includes-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,44px);color:var(--teal);margin-bottom:48px}
+    .includes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1100px;margin:0 auto 40px}
+    .inc-item{text-align:center;padding:32px 20px}
+    .inc-number{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:700;color:var(--teal);line-height:1;margin-bottom:8px}
+    .inc-label{font-size:16px;font-weight:600;color:var(--charcoal);margin-bottom:8px}
+    .inc-desc{font-size:14px;color:var(--muted);line-height:1.6}
+    .includes-bottom{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:32px;border-top:1px solid var(--border);max-width:800px;margin:0 auto}
+    .inc-small{text-align:center}
+    .inc-small-label{font-size:14px;font-weight:600;color:var(--teal)}
+    .inc-small-desc{font-size:13px;color:var(--muted)}
 
-    /* PRESS */
-    .press-section{background:var(--warm);text-align:center;padding:48px 24px}
-    .press-bar{display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;max-width:900px;margin:0 auto}
-    .press-item{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:380px}
-    .press-logo{height:40px;opacity:.7}
-    .press-text{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--charcoal);font-style:italic;line-height:1.5}
+    /* 5. DATES */
+    .dates-section{background:var(--teal);color:white;padding:80px 24px}
+    .dates-section .section-eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;font-weight:500}
+    .dates-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,44px);color:white;margin-bottom:12px}
+    .dates-sub{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:40px}
+    .date-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;max-width:1100px;margin:0 auto}
+    .date-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:28px;transition:background .3s}
+    .date-card:hover{background:rgba(255,255,255,.1)}
+    .date-card-day{font-family:'Cormorant Garamond',serif;font-size:26px;color:white;margin-bottom:4px}
+    .date-card-route{font-size:14px;color:var(--gold);margin-bottom:8px;font-weight:500}
+    .date-card-desc{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;line-height:1.5}
+    .date-card-meta{font-size:12px;color:rgba(255,255,255,.35);margin-bottom:16px}
+    .date-card-actions{display:flex;gap:10px}
+    .date-book{display:inline-block;background:var(--gold);color:white;text-decoration:none;padding:10px 24px;font-size:13px;font-weight:600;letter-spacing:.5px;transition:background .3s}
+    .date-book:hover{background:var(--gold-light)}
+    .date-learn{display:inline-block;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);text-decoration:none;padding:10px 20px;font-size:13px;font-weight:500;transition:all .3s}
+    .date-learn:hover{border-color:rgba(255,255,255,.5);color:white}
 
-    /* REVIEWS */
-    .reviews-section{background:var(--cream);padding:80px 24px}
-    .reviews-section .section-title{color:var(--teal)}
-    .reviews-scroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px}
-    .reviews-scroll::-webkit-scrollbar{height:4px}
-    .reviews-scroll::-webkit-scrollbar-track{background:var(--border)}
-    .reviews-scroll::-webkit-scrollbar-thumb{background:var(--gold)}
-    .review-card{flex:0 0 240px;scroll-snap-align:start}
-    .review-card video{width:240px;height:426px;object-fit:cover;background:black}
-
-    /* TOURS */
-    .tours-section{background:var(--teal);color:white;padding:80px 24px}
-    .tours-section .section-eyebrow{color:var(--gold)}
-    .tours-section .section-title{color:white}
-    .tour-month{margin-bottom:32px}
-    .tour-month-label{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(196,163,90,.3)}
-    .tour-card{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap;gap:12px}
-    .tour-date{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;min-width:120px}
-    .tour-route{flex:1;font-size:15px;color:rgba(255,255,255,.75);min-width:200px}
-    .tour-station{font-size:12px;color:rgba(255,255,255,.4);margin-top:2px}
-    .tour-book{display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:10px 28px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:all .3s}
-    .tour-book:hover{background:var(--gold);color:white}
-    .tour-learn{display:inline-block;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);text-decoration:none;padding:10px 20px;font-size:13px;font-weight:500;letter-spacing:.5px;transition:all .3s}
-    .tour-learn:hover{border-color:rgba(255,255,255,.6);color:white}
-    .tour-buttons{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-
-        /* VINEYARDS */
+    /* 6. VINEYARDS */
     .vineyards-section{background:white;padding:80px 24px}
-    .vineyard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
-    .vineyard-card{border:1px solid var(--border);overflow:hidden;transition:transform .3s}
+    .vineyards-section .section-eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;font-weight:500}
+    .vineyards-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,44px);color:var(--teal);margin-bottom:12px}
+    .vineyards-sub{font-size:15px;color:var(--muted);margin-bottom:48px}
+    .vineyard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+    .vineyard-card{overflow:hidden;border:1px solid var(--border);transition:transform .3s}
     .vineyard-card:hover{transform:translateY(-4px)}
-    .vineyard-img{width:100%;height:220px;object-fit:cover}
-    .vineyard-card-body{padding:20px 24px 24px}
+    .vineyard-img{width:100%;height:240px;object-fit:cover}
+    .vineyard-body{padding:20px 24px 24px}
     .vineyard-name{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--teal);margin-bottom:2px}
-    .vineyard-location{font-size:12px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+    .vineyard-loc{font-size:12px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
     .vineyard-desc{font-size:14px;color:var(--muted);line-height:1.6}
+
+    /* 7. SOCIAL PROOF */
+    .proof-section{background:var(--cream);padding:80px 24px}
+    .proof-section .section-eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;font-weight:500}
+    .proof-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);color:var(--teal);margin-bottom:40px}
+    .proof-scroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px}
+    .proof-scroll::-webkit-scrollbar{height:4px}
+    .proof-scroll::-webkit-scrollbar-track{background:var(--border)}
+    .proof-scroll::-webkit-scrollbar-thumb{background:var(--gold)}
+    .proof-card{flex:0 0 240px;scroll-snap-align:start}
+    .proof-card video{width:240px;height:426px;object-fit:cover;background:black}
+
+    /* 8. WHY ROTHER */
+    .story-section{background:white;padding:80px 24px}
+    .story-inner{max-width:800px;margin:0 auto}
+    .story-press{display:flex;justify-content:center;gap:40px;align-items:center;margin-bottom:40px;flex-wrap:wrap}
+    .story-press img{height:36px;opacity:.6}
+    .story-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,36px);color:var(--teal);text-align:center;margin-bottom:24px}
+    .story-body{font-size:16px;color:var(--muted);line-height:1.8;text-align:center;max-width:650px;margin:0 auto}
 
     /* VIDEO BREAK */
     .video-break{background:var(--charcoal);padding:40px 24px}
-    .video-break-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .video-break-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .video-break video{width:100%;aspect-ratio:9/16;object-fit:cover;background:black}
 
     /* SHIPPING */
@@ -132,77 +141,74 @@
 
     /* FINAL CTA */
     .final-cta{background:linear-gradient(160deg,var(--teal) 0%,var(--green) 100%);text-align:center;padding:100px 24px}
-    .final-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,56px);color:white;font-weight:400;margin-bottom:16px}
-    .final-cta p{color:rgba(255,255,255,.65);font-size:18px;margin-bottom:40px}
+    .final-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,48px);color:white;font-weight:400;margin-bottom:8px}
+    .final-cta .tagline{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);font-style:italic;margin-bottom:32px}
+    .final-cta p{color:rgba(255,255,255,.55);font-size:15px;margin-bottom:32px}
 
-    /* FOOTER */
     footer{background:var(--charcoal);color:rgba(255,255,255,.5);padding:48px 24px;text-align:center;font-size:14px}
     footer a{color:var(--gold);text-decoration:none}
     footer .footer-links{margin-bottom:24px}
     footer .footer-links a{margin:0 16px}
 
-    /* RESPONSIVE */
+    .container{max-width:1100px;margin:0 auto}
+
     @media(max-width:768px){
-      section{padding:60px 20px}
       .hero{min-height:auto;padding:80px 20px 0}
       .hero-inner{grid-template-columns:1fr;gap:24px;text-align:center}
       .hero-inner .hero-content{order:1}
-      .hero-inner .hero-video-wrap{order:2;margin:0 -20px;min-height:280px}
+      .hero-inner .hero-video-wrap{order:2;margin:0 -20px;min-height:400px}
       .hero-mobile-cta{display:block;order:3;text-align:center;padding:20px 0 40px}
       .hero-mobile-cta .cta-primary{display:inline-block;width:100%;padding:16px;font-size:15px}
-      .hero-eyebrow{margin-bottom:16px;font-size:11px}
-      .hero h1{font-size:32px;margin-bottom:16px}
+      .hero-kicker{margin-bottom:16px;font-size:13px}
+      .hero h1{font-size:30px;margin-bottom:16px}
       .hero h1 br{display:none}
-      .hero-sub{display:none}
-      .hero-price{margin-bottom:0;padding:10px 24px}
-      .hero-price .amount{font-size:36px}
+      .hero-tagline{font-size:20px;margin-bottom:20px}
+      .hero-detail{display:none}
+      .hero-price-row{justify-content:center}
+      .hero-price{font-size:36px}
       .hero-content .cta-primary{display:none}
-      .hero-video-wrap{min-height:400px}
-      .value-grid{grid-template-columns:repeat(2,1fr)}
-      .tour-card{flex-direction:column;align-items:flex-start}
-      .tour-book{width:100%;text-align:center}
-      .tour-buttons{width:100%;flex-direction:row}
-      .tour-learn{flex:1;text-align:center}
-      .tour-book{flex:1}
+      .journey-flow{flex-direction:column;gap:4px}
+      .journey-arr{transform:rotate(90deg)}
+      .includes-grid{grid-template-columns:1fr}
+      .includes-bottom{flex-direction:column;gap:24px}
+      .date-cards{grid-template-columns:1fr}
+      .date-card-actions{flex-direction:row}
+      .date-book,.date-learn{flex:1;text-align:center}
       .vineyard-grid{grid-template-columns:1fr}
       .video-break-inner{grid-template-columns:repeat(3,1fr);gap:8px}
+      .story-press{gap:24px}
+      nav .nav-links .nav-link{display:none}
       nav .logo{font-size:15px}
-      nav .cta-nav{padding:8px 16px;font-size:13px}
-      .journey-strip{flex-direction:column;gap:8px}
-      .journey-arrow{transform:rotate(90deg)}
-      .urgency-banner{flex-direction:column;gap:12px}
     }
     @media(max-width:480px){
-      .value-grid{grid-template-columns:1fr}
-      .value-item{padding:28px 24px}
+      .includes-grid{grid-template-columns:1fr}
     }
-    @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      .vineyard-card:hover,.cta-primary:hover{transform:none}
-    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta-primary:hover,.vineyard-card:hover{transform:none}}
   </style>
 </head>
 <body>
 
   <nav>
-    <div class="logo">Rother <span>Wine Triangle</span> Bus Tour</div>
-    <a href="getting-there/" class="logo" style="font-size:14px;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;margin-left:auto;margin-right:16px;font-family:'DM Sans',sans-serif;letter-spacing:0">Getting There</a>
-    <a href="#tours" class="cta-nav">Book a Tour</a>
+    <a href="/" class="logo">Rother <span>Wine Triangle</span></a>
+    <div class="nav-links">
+      <a href="getting-there/" class="nav-link">Getting There</a>
+      <a href="#tours" class="cta-nav">Book a Sunday</a>
+    </div>
   </nav>
 
   <!-- 1. HERO -->
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-eyebrow">Sussex Wine Country</div>
-        <h1>Three vineyards. Twelve tastings.<br>One <em>very good</em> day.</h1>
-        <p class="hero-sub">The Rother Wine Triangle bus tour takes you to three award-winning vineyards in the Sussex countryside. Everything included. Just turn up.</p>
-        <div class="hero-price">
-          <div class="amount">£130</div>
-          <div class="detail">per person · everything included</div>
+        <div class="hero-kicker">London's wine country day trip</div>
+        <h1>Three vineyards.<br>Twelve tastings.<br>One <em>very good</em> day.</h1>
+        <div class="hero-tagline">Escape London. Spend Sunday drinking your way through Sussex wine country.</div>
+        <div class="hero-detail">We pick you up at the station. We pour the wine. We get you home.</div>
+        <div class="hero-price-row">
+          <div class="hero-price">£130</div>
+          <div class="hero-price-note">everything included</div>
         </div>
-        <br>
-        <a href="#tours" class="cta-primary">See Dates &amp; Book</a>
+        <a href="#tours" class="cta-primary">Book a Sunday</a>
       </div>
       <div class="hero-video-wrap">
         <video autoplay muted loop playsinline>
@@ -210,173 +216,182 @@
         </video>
       </div>
       <div class="hero-mobile-cta">
-        <a href="#tours" class="cta-primary">See Dates &amp; Book</a>
+        <a href="#tours" class="cta-primary">Book a Sunday</a>
       </div>
     </div>
   </section>
 
-  <!-- URGENCY BANNER -->
-  <div class="urgency-banner">
-    <div class="urgency-text">Next tour: Sunday 16th August</div>
-    <a href="#tours" class="urgency-cta">Book Now</a>
-  </div>
-
-  <!-- 2. WHAT YOU GET -->
-  <section class="value-section">
-    <div class="container">
-      <div class="section-eyebrow">What £130 gets you</div>
-      <h2 class="section-title">Here's what your day looks like</h2>
-      <div class="value-grid">
-        <div class="value-item">
-          <div class="value-number">3</div>
-          <div class="value-label">Vineyards in one day</div>
-          <div class="value-desc">Three award-winning estates, each with its own wines, its own story, and its own welcome</div>
-        </div>
-        <div class="value-item">
-          <div class="value-number">12</div>
-          <div class="value-label">Wines to taste</div>
-          <div class="value-desc">Four at each vineyard, poured and guided by the people who made them</div>
-        </div>
-        <div class="value-item">
-          <div class="value-number">Lunch</div>
-          <div class="value-label">With wine pairings</div>
-          <div class="value-desc">A Sussex spread overlooking the vines. Local produce, English wines, no rush</div>
-        </div>
-        <div class="value-item">
-          <div class="value-number">Bus</div>
-          <div class="value-label">Between every stop</div>
-          <div class="value-desc">Luxury, air-conditioned. Sit back and watch the Sussex countryside roll by</div>
-        </div>
-        <div class="value-item">
-          <div class="value-number">1hr</div>
-          <div class="value-label">From London</div>
-          <div class="value-desc">Train from Charing Cross. We meet you at the station. We drop you back at the end</div>
-        </div>
-        <div class="value-item">
-          <div class="value-number">Free</div>
-          <div class="value-label">Wine shipping</div>
-          <div class="value-desc">Fall in love with a wine? Buy six bottles and they'll ship them home. No carrying</div>
-        </div>
-      </div>
-      <div class="journey-strip">
-        <div class="journey-step"><div class="journey-step-label">Catch the train</div><div class="journey-step-desc">Charing Cross to Robertsbridge</div></div>
-        <div class="journey-arrow">&rarr;</div>
-        <div class="journey-step"><div class="journey-step-label">We pick you up</div><div class="journey-step-desc">Step off, onto the bus</div></div>
-        <div class="journey-arrow">&rarr;</div>
-        <div class="journey-step"><div class="journey-step-label">Three vineyards</div><div class="journey-step-desc">Tastings, lunch, explore</div></div>
-        <div class="journey-arrow">&rarr;</div>
-        <div class="journey-step"><div class="journey-step-label">Home by teatime</div><div class="journey-step-desc">Dropped back at the station</div></div>
-      </div>
-      <div style="text-align:center;margin-top:24px">
-        <a href="getting-there/" style="color:var(--gold);font-size:14px;font-weight:500">Full travel details &rarr;</a>
-      </div>
+  <!-- 2. JOURNEY -->
+  <section class="journey-section">
+    <div class="journey-flow">
+      <div class="journey-node">London</div>
+      <div class="journey-arr">→</div>
+      <div class="journey-node">Robertsbridge</div>
+      <div class="journey-arr">→</div>
+      <div class="journey-node highlight">3 vineyards · lunch · 12 wines</div>
+      <div class="journey-arr">→</div>
+      <div class="journey-node">London</div>
     </div>
-  </section>
-  <section class="press-section">
-    <div class="press-bar">
-      <div class="press-item">
-        <img class="press-logo" src="assets/the-times-logo.png" alt="The Times" loading="lazy">
-        <div class="press-text">Two Rother Valley vineyards named among the UK's 25 best vineyard stays</div>
-      </div>
-      <div class="press-item">
-        <img class="press-logo" src="assets/cityam-logo.png" alt="City AM" loading="lazy">
-        <div class="press-text">Sussex has become the UK's first wine-specific Protected Designation of Origin, similar to Champagne</div>
-      </div>
-    </div>
+    <div class="journey-note">Train down. We do the rest. No driving. No planning. No designated driver required.</div>
+    <div style="margin-top:16px"><a href="getting-there/" style="color:var(--teal);font-size:14px;font-weight:600;text-decoration:none">Full travel details →</a></div>
   </section>
 
-  <!-- 3. PRESS -->
-  <section style="background:linear-gradient(160deg,var(--teal) 0%,var(--green) 100%);text-align:center;padding:60px 24px">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);color:white;margin-bottom:16px">Ready to book your day?</div>
-    <p style="color:rgba(255,255,255,.6);font-size:16px;margin-bottom:28px">Three vineyards. Twelve tastings. Lunch. Transport. £130.</p>
-    <a href="#tours" class="cta-primary">See Dates &amp; Book</a>
-  </section>
-
-  <!-- 4. INFLUENCER REVIEWS (moved up) -->
-  <section class="reviews-section">
+  <!-- 3. SOCIAL PROOF -->
+  <section class="proof-section">
     <div class="container">
       <div class="section-eyebrow">Don't take our word for it</div>
-      <h2 class="section-title">Real guests. Real reactions.</h2>
+      <div class="proof-title">Real guests. Real Sundays.</div>
     </div>
     <div class="container">
-      <div class="reviews-scroll">
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-7-poster.jpg"><source src="assets/influencer-7.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-1-poster.jpg"><source src="assets/influencer-1.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-2-poster.jpg"><source src="assets/influencer-2.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-4-poster.jpg"><source src="assets/influencer-4.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-3-poster.jpg"><source src="assets/influencer-3.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-5-poster.jpg"><source src="assets/influencer-5.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-6-poster.jpg"><source src="assets/influencer-6.mp4" type="video/mp4"></video></div>
+      <div class="proof-scroll">
+        <div class="proof-card"><video controls playsinline preload="metadata" poster="assets/influencer-7-poster.jpg"><source src="assets/influencer-7.mp4" type="video/mp4"></video></div>
+        <div class="proof-card"><video controls playsinline preload="metadata" poster="assets/influencer-1-poster.jpg"><source src="assets/influencer-1.mp4" type="video/mp4"></video></div>
+        <div class="proof-card"><video controls playsinline preload="metadata" poster="assets/influencer-2-poster.jpg"><source src="assets/influencer-2.mp4" type="video/mp4"></video></div>
+        <div class="proof-card"><video controls playsinline preload="metadata" poster="assets/influencer-4-poster.jpg"><source src="assets/influencer-4.mp4" type="video/mp4"></video></div>
+        <div class="proof-card"><video controls playsinline preload="metadata" poster="assets/influencer-3-poster.jpg"><source src="assets/influencer-3.mp4" type="video/mp4"></video></div>
+        <div class="proof-card"><video controls playsinline preload="metadata" poster="assets/influencer-5-poster.jpg"><source src="assets/influencer-5.mp4" type="video/mp4"></video></div>
+        <div class="proof-card"><video controls playsinline preload="metadata" poster="assets/influencer-6-poster.jpg"><source src="assets/influencer-6.mp4" type="video/mp4"></video></div>
       </div>
     </div>
   </section>
 
-  <!-- 5. TOURS (moved up) -->
-  <section class="tours-section" id="tours">
+  <!-- 4. YOUR £130 INCLUDES -->
+  <section class="includes-section">
+    <div class="container" style="text-align:center">
+      <div class="includes-section section-eyebrow">Your £130 includes</div>
+      <div class="includes-title">We pick you up. We pour the wine. We get you home.</div>
+      <div class="includes-grid">
+        <div class="inc-item">
+          <div class="inc-number">3</div>
+          <div class="inc-label">Vineyards</div>
+          <div class="inc-desc">A different three every Sunday. Each with its own wines and its own welcome.</div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-number">12</div>
+          <div class="inc-label">Wines</div>
+          <div class="inc-desc">Four at each vineyard. Poured and guided by the people who made them.</div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-number">Lunch</div>
+          <div class="inc-label">At the vineyard</div>
+          <div class="inc-desc">Local cheeses, charcuterie, seasonal produce. Paired with the wines. Overlooking the vines.</div>
+        </div>
+      </div>
+      <div class="includes-bottom">
+        <div class="inc-small"><div class="inc-small-label">Private bus</div><div class="inc-small-desc">Luxury, air-conditioned, between every stop</div></div>
+        <div class="inc-small"><div class="inc-small-label">Station pickup</div><div class="inc-small-desc">We meet you off the train and drop you back</div></div>
+        <div class="inc-small"><div class="inc-small-label">Free shipping</div><div class="inc-small-desc">Buy 6+ bottles, they ship them home</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. UPCOMING SUNDAYS -->
+  <section class="dates-section" id="tours">
     <div class="container">
-      <div class="section-eyebrow">Tours</div>
-      <h2 class="section-title">Pick your date</h2>
-      <p style="font-size:16px;color:rgba(255,255,255,.6);margin-bottom:40px;max-width:500px;">Tours run every Sunday, August to October. Each one visits three vineyards.</p>
+      <div class="section-eyebrow">Upcoming Sundays</div>
+      <div class="dates-title">Pick your day</div>
+      <div class="dates-sub">Six vineyards. A different three every Sunday.</div>
 
-      <div class="tour-month">
-        <div class="tour-month-label">August</div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 16 Aug</div>
-          <div class="tour-route">Oxney Estate, Tillingham &amp; Sedlescombe<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="oxney-tillingham-sedlescombe/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/-oxney-estate-tillingham-sedlescombe--pPMPXTP.html" class="tour-book" target="_blank">Book</a></div>
+      <div class="date-cards">
+        <div class="date-card">
+          <div class="date-card-day">Sunday 16 August</div>
+          <div class="date-card-route">Oxney × Tillingham × Sedlescombe</div>
+          <div class="date-card-desc">Two organic pioneers and a natural winemaker with 21 grape varieties.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/-oxney-estate-tillingham-sedlescombe--pPMPXTP.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="oxney-tillingham-sedlescombe/" class="date-learn">Details</a>
+          </div>
         </div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 24 Aug</div>
-          <div class="tour-route">Oastbrook Estate, Oxney Estate &amp; Charles Palmer<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="oastbrook-oxney-charles-palmer/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/oastbrook-estate-oxney-estate-charles-palmer-pPBU9TR.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 24 August</div>
+          <div class="date-card-route">Oastbrook × Oxney × Charles Palmer</div>
+          <div class="date-card-desc">A family estate, England's largest organic vineyard, and views stretching to the sea.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/oastbrook-estate-oxney-estate-charles-palmer-pPBU9TR.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="oastbrook-oxney-charles-palmer/" class="date-learn">Details</a>
+          </div>
         </div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 30 Aug</div>
-          <div class="tour-route">Sedlescombe, Charles Palmer &amp; Tillingham<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="sedlescombe-charles-palmer-tillingham/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/sedlescombe-charles-palmer-tillingham-pP3N1FN.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 30 August</div>
+          <div class="date-card-route">Sedlescombe × Charles Palmer × Tillingham</div>
+          <div class="date-card-desc">England's oldest organic vineyard, sea-view wines, and natural winemaking.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/sedlescombe-charles-palmer-tillingham-pP3N1FN.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="sedlescombe-charles-palmer-tillingham/" class="date-learn">Details</a>
+          </div>
         </div>
-      </div>
-
-      <div class="tour-month">
-        <div class="tour-month-label">September</div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 6 Sep</div>
-          <div class="tour-route">Oastbrook Estate, Oxney Estate &amp; Charles Palmer<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="oastbrook-oxney-charles-palmer/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/oastbrook-estate-oxney-estate-charles-palmer-pPBU9TR.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 6 September</div>
+          <div class="date-card-route">Oastbrook × Oxney × Charles Palmer</div>
+          <div class="date-card-desc">A family estate, England's largest organic vineyard, and views stretching to the sea.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/oastbrook-estate-oxney-estate-charles-palmer-pPBU9TR.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="oastbrook-oxney-charles-palmer/" class="date-learn">Details</a>
+          </div>
         </div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 13 Sep</div>
-          <div class="tour-route">Oxney Estate, Tillingham &amp; Sedlescombe<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="oxney-tillingham-sedlescombe/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/-oxney-estate-tillingham-sedlescombe--pPMPXTP.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 13 September</div>
+          <div class="date-card-route">Oxney × Tillingham × Sedlescombe</div>
+          <div class="date-card-desc">Two organic pioneers and a natural winemaker with 21 grape varieties.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/-oxney-estate-tillingham-sedlescombe--pPMPXTP.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="oxney-tillingham-sedlescombe/" class="date-learn">Details</a>
+          </div>
         </div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 20 Sep</div>
-          <div class="tour-route">Charles Palmer, Sedlescombe &amp; Oastbrook Estate<div class="tour-station">From Rye Station</div></div>
-          <div class="tour-buttons"><a href="charles-palmer-sedlescombe-oastbrook/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/charles-palmer-sedlescombe-oastbrook-estate--pP0QU9C.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 20 September</div>
+          <div class="date-card-route">Charles Palmer × Sedlescombe × Oastbrook</div>
+          <div class="date-card-desc">Sea views, England's oldest organic vineyard, and a fairytale estate. From Rye Station.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Rye pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/charles-palmer-sedlescombe-oastbrook-estate--pP0QU9C.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="charles-palmer-sedlescombe-oastbrook/" class="date-learn">Details</a>
+          </div>
         </div>
-      </div>
-
-      <div class="tour-month">
-        <div class="tour-month-label">October</div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 4 Oct</div>
-          <div class="tour-route">Oxney Estate, Tillingham &amp; Sedlescombe<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="oxney-tillingham-sedlescombe/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/-oxney-estate-tillingham-sedlescombe--pPMPXTP.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 4 October</div>
+          <div class="date-card-route">Oxney × Tillingham × Sedlescombe</div>
+          <div class="date-card-desc">Two organic pioneers and a natural winemaker. Autumn in the vineyard.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/-oxney-estate-tillingham-sedlescombe--pPMPXTP.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="oxney-tillingham-sedlescombe/" class="date-learn">Details</a>
+          </div>
         </div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 11 Oct</div>
-          <div class="tour-route">Oxney Estate, Tillingham &amp; Sedlescombe<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="oxney-tillingham-sedlescombe/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/-oxney-estate-tillingham-sedlescombe--pPMPXTP.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 11 October</div>
+          <div class="date-card-route">Oxney × Tillingham × Sedlescombe</div>
+          <div class="date-card-desc">Two organic pioneers and a natural winemaker. Autumn in the vineyard.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/-oxney-estate-tillingham-sedlescombe--pPMPXTP.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="oxney-tillingham-sedlescombe/" class="date-learn">Details</a>
+          </div>
         </div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 18 Oct</div>
-          <div class="tour-route">Oastbrook Estate, Oxney Estate &amp; Charles Palmer<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="oastbrook-oxney-charles-palmer/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/oastbrook-estate-oxney-estate-charles-palmer-pPBU9TR.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 18 October</div>
+          <div class="date-card-route">Oastbrook × Oxney × Charles Palmer</div>
+          <div class="date-card-desc">A family estate, England's largest organic vineyard, and views to the sea.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/oastbrook-estate-oxney-estate-charles-palmer-pPBU9TR.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="oastbrook-oxney-charles-palmer/" class="date-learn">Details</a>
+          </div>
         </div>
-        <div class="tour-card">
-          <div class="tour-date">Sun 25 Oct</div>
-          <div class="tour-route">Sedlescombe, Charles Palmer &amp; Tillingham<div class="tour-station">From Robertsbridge Station</div></div>
-          <div class="tour-buttons"><a href="sedlescombe-charles-palmer-tillingham/" class="tour-learn">Learn more</a><a href="https://rotherwinetriangle.securedirectbookings.com/sedlescombe-charles-palmer-tillingham-pP3N1FN.html" class="tour-book" target="_blank">Book</a></div>
+        <div class="date-card">
+          <div class="date-card-day">Sunday 25 October</div>
+          <div class="date-card-route">Sedlescombe × Charles Palmer × Tillingham</div>
+          <div class="date-card-desc">England's oldest organic vineyard, sea-view wines, and natural winemaking. Last tour of the season.</div>
+          <div class="date-card-meta">12 wines · vineyard lunch · Robertsbridge pickup · £130</div>
+          <div class="date-card-actions">
+            <a href="https://rotherwinetriangle.securedirectbookings.com/sedlescombe-charles-palmer-tillingham-pP3N1FN.html" class="date-book" target="_blank">Book Sunday →</a>
+            <a href="sedlescombe-charles-palmer-tillingham/" class="date-learn">Details</a>
+          </div>
         </div>
       </div>
     </div>
@@ -385,20 +400,21 @@
   <!-- 6. VINEYARDS -->
   <section class="vineyards-section">
     <div class="container">
-      <div class="section-eyebrow">The vineyards</div>
-      <h2 class="section-title">Six estates. Six stories.</h2>
+      <div class="section-eyebrow">Meet the vineyards</div>
+      <div class="vineyards-title">Six estates. A different three every Sunday.</div>
+      <div class="vineyards-sub">These aren't anonymous stops. Some are destinations in their own right.</div>
       <div class="vineyard-grid">
-        <div class="vineyard-card"><img class="vineyard-img" src="assets/oxney.jpg" alt="Oxney Estate" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Oxney Estate</div><div class="vineyard-location">Beckley, near Rye</div><div class="vineyard-desc">England's largest single-estate organic vineyard. 35 acres of vines, a Grade II listed oast house winery, and shepherd's hut accommodation.</div></div></div>
-        <div class="vineyard-card"><img class="vineyard-img" src="assets/oastbrook.jpg" alt="Oastbrook Estate" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Oastbrook Estate</div><div class="vineyard-location">Bodiam, near Robertsbridge</div><div class="vineyard-desc">A family-run vineyard renowned for its beautiful setting and exquisite wines. Stay in the Hobbit House or the Avalon Waterside Lodge.</div></div></div>
-        <div class="vineyard-card"><img class="vineyard-img" src="assets/tillingham.jpg" alt="Tillingham" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Tillingham</div><div class="vineyard-location">Peasmarsh</div><div class="vineyard-desc">A historic estate farmed since the 13th century, making natural wines from 21 grape varieties. Restaurant, rooms, and bell tents.</div></div></div>
-        <div class="vineyard-card"><img class="vineyard-img" src="assets/charles-palmer.jpg" alt="Charles Palmer" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Charles Palmer</div><div class="vineyard-location">Near Hastings</div><div class="vineyard-desc">Home to some of the oldest vines in the Rother Valley, with a warm welcome and stunning views to the sea.</div></div></div>
-        <div class="vineyard-card"><img class="vineyard-img" src="assets/sedlescombe.jpg" alt="Sedlescombe" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Sedlescombe</div><div class="vineyard-location">Near Battle</div><div class="vineyard-desc">England's oldest organic vineyard. Decades of craft producing wines with character and depth.</div></div></div>
-        <div class="vineyard-card"><img class="vineyard-img" src="assets/mountfield.jpg" alt="Mountfield" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Mountfield</div><div class="vineyard-location">Near Robertsbridge</div><div class="vineyard-desc">A stunning vineyard set against a beautiful country estate, making award-winning wines.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/oxney.jpg" alt="Oxney Estate" loading="lazy"><div class="vineyard-body"><div class="vineyard-name">Oxney Estate</div><div class="vineyard-loc">Beckley, near Rye</div><div class="vineyard-desc">England's largest single-estate organic vineyard. 35 acres of vines, a Grade II listed oast house winery, and shepherd's hut accommodation.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/oastbrook.jpg" alt="Oastbrook Estate" loading="lazy"><div class="vineyard-body"><div class="vineyard-name">Oastbrook Estate</div><div class="vineyard-loc">Bodiam, near Robertsbridge</div><div class="vineyard-desc">A family-run vineyard with a Hobbit House, a waterside lodge, and two of the most passionate winemakers you'll meet.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/tillingham.jpg" alt="Tillingham" loading="lazy"><div class="vineyard-body"><div class="vineyard-name">Tillingham</div><div class="vineyard-loc">Peasmarsh</div><div class="vineyard-desc">A 13th-century estate making natural wines from 21 grape varieties. Restaurant, rooms, and bell tents in summer.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/charles-palmer.jpg" alt="Charles Palmer" loading="lazy"><div class="vineyard-body"><div class="vineyard-name">Charles Palmer</div><div class="vineyard-loc">Near Hastings</div><div class="vineyard-desc">Some of the oldest vines in the valley. A warm welcome and views stretching to the sea.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/sedlescombe.jpg" alt="Sedlescombe" loading="lazy"><div class="vineyard-body"><div class="vineyard-name">Sedlescombe</div><div class="vineyard-loc">Near Battle</div><div class="vineyard-desc">England's oldest organic vineyard. Decades of craft producing wines with character.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/mountfield.jpg" alt="Mountfield" loading="lazy"><div class="vineyard-body"><div class="vineyard-name">Mountfield</div><div class="vineyard-loc">Near Robertsbridge</div><div class="vineyard-desc">A stunning country estate making award-winning wines in one of the finest settings in Sussex.</div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- 7. PROFESSIONAL VIDEOS (moved down) -->
+  <!-- 7. VIDEO -->
   <div class="video-break">
     <div class="video-break-inner">
       <video controls playsinline preload="metadata" poster="assets/tour-vines-poster.jpg"><source src="assets/tour-vines.mp4" type="video/mp4"></video>
@@ -407,69 +423,56 @@
     </div>
   </div>
 
-  <!-- 8. SHIPPING -->
+  <!-- 8. WHY ROTHER -->
+  <section class="story-section">
+    <div class="story-inner">
+      <div class="story-press">
+        <img src="assets/the-times-logo.png" alt="The Times" loading="lazy">
+        <img src="assets/cityam-logo.png" alt="City AM" loading="lazy">
+      </div>
+      <div class="story-headline">Welcome to Sussex wine country</div>
+      <div class="story-body">The Rother Valley in East Sussex has quietly become one of the most exciting wine regions in England. The low-lying landscape creates a warm microclimate with some of the highest sunshine hours in the country. The result: award-winning sparkling wines, organic estates, natural winemakers, and a growing reputation that's caught the attention of The Times and City AM. Sussex now holds the UK's first wine-specific Protected Designation of Origin, the same status as Champagne. Six vineyards. An hour from London. And most people haven't found it yet.</div>
+    </div>
+  </section>
+
+  <!-- SHIPPING -->
   <div class="shipping-strip">
-    <h3>Love the wine? We'll ship it home.</h3>
-    <p>Buy six or more bottles at any vineyard on the tour and they'll ship them home for free. No lugging bottles on the train.</p>
+    <h3>The difficult bit is choosing what to buy.</h3>
+    <p>Buy six or more bottles at any vineyard and they'll ship them home for free. No lugging bottles on the train.</p>
   </div>
 
   <!-- 9. FAQ -->
   <section class="faq-section">
     <div class="container">
-      <div class="section-eyebrow">Questions</div>
-      <h2 class="section-title">Good to know</h2>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,36px);color:var(--teal);margin-bottom:40px">Good to know</div>
       <div class="faq-grid">
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-question">What happens if it rains?<span class="faq-arrow">&#9662;</span></div>
-          <div class="faq-answer"><div class="faq-answer-inner">The tours run rain or shine. Tastings happen indoors at each vineyard, and the bus is air-conditioned. You might want to bring a jacket for vineyard walks, but a bit of English weather has never stopped anyone enjoying English wine.</div></div>
-        </div>
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-question">Do I need to know about wine?<span class="faq-arrow">&#9662;</span></div>
-          <div class="faq-answer"><div class="faq-answer-inner">Not at all. The tastings are guided by the winemakers themselves, and they're used to welcoming everyone from complete beginners to serious collectors. Just come with curiosity.</div></div>
-        </div>
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-question">Can you cater for dietary requirements?<span class="faq-arrow">&#9662;</span></div>
-          <div class="faq-answer"><div class="faq-answer-inner">Yes. Vegetarian and vegan options are available for the lunch. Please let us know any dietary requirements when you book and we'll make sure everything is sorted.</div></div>
-        </div>
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-question">Can I drive instead of taking the train?<span class="faq-arrow">&#9662;</span></div>
-          <div class="faq-answer"><div class="faq-answer-inner">The bus picks up and drops off at the station, so the train is the easiest option and means you can enjoy all 12 tastings. If you do drive, you can arrange to meet the bus at the first vineyard, but please contact us in advance.</div></div>
-        </div>
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-question">How many people are on each tour?<span class="faq-arrow">&#9662;</span></div>
-          <div class="faq-answer"><div class="faq-answer-inner">Tours are kept to a comfortable group size so you get a personal experience at each vineyard. It's a great day for couples, friends, or groups.</div></div>
-        </div>
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-question">Can I buy wine on the tour?<span class="faq-arrow">&#9662;</span></div>
-          <div class="faq-answer"><div class="faq-answer-inner">Absolutely. You can buy bottles at every vineyard you visit and carry them on the bus. If you buy six or more bottles at any single vineyard, they'll ship them all home for free.</div></div>
-        </div>
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-question">Can I book for a group?<span class="faq-arrow">&#9662;</span></div>
-          <div class="faq-answer"><div class="faq-answer-inner">Yes, it's a great day out for groups. Just book individual tickets for each person through the booking page. For larger groups or private bookings, please get in touch directly.</div></div>
-        </div>
-        <div class="faq-item" onclick="this.classList.toggle('open')">
-          <div class="faq-question">Which train do I need to catch?<span class="faq-arrow">&#9662;</span></div>
-          <div class="faq-answer"><div class="faq-answer-inner">Most tours depart from Robertsbridge Station. Catch the train from London Charing Cross or London Bridge to Hastings, arriving at Robertsbridge at 11:05. The return train is at 16:08. One tour route departs from Rye Station instead, arriving at 10:46 with a 15:48 return.</div></div>
-        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-question">What happens if it rains?<span class="faq-arrow">▾</span></div><div class="faq-answer"><div class="faq-answer-inner">Tours run rain or shine. Tastings happen indoors, the bus is air-conditioned, and the Rother Valley gets some of the highest sunshine hours in England. You'll probably be fine.</div></div></div>
+        <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-question">Do I need to know about wine?<span class="faq-arrow">▾</span></div><div class="faq-answer"><div class="faq-answer-inner">Not even slightly. The winemakers guide every tasting and they're used to welcoming everyone from first-timers to serious collectors. Just come thirsty.</div></div></div>
+        <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-question">Dietary requirements?<span class="faq-arrow">▾</span></div><div class="faq-answer"><div class="faq-answer-inner">Vegetarian and vegan options available for lunch. Let us know when you book and we'll make sure everything's sorted.</div></div></div>
+        <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-question">Can I drive instead of taking the train?<span class="faq-arrow">▾</span></div><div class="faq-answer"><div class="faq-answer-inner">You can arrange to meet the bus at the first vineyard if you'd rather drive. But honestly, the train is part of the experience. And you can enjoy all 12 wines.</div></div></div>
+        <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-question">How many people per tour?<span class="faq-arrow">▾</span></div><div class="faq-answer"><div class="faq-answer-inner">Tours are kept to a comfortable group size. It's a great day for couples, friends, birthdays, or a group of you escaping the city.</div></div></div>
+        <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-question">Which train do I need?<span class="faq-arrow">▾</span></div><div class="faq-answer"><div class="faq-answer-inner">Most tours: London Charing Cross or London Bridge to Robertsbridge, arriving 11:05. Return at 16:08. One route departs from Rye Station instead (10:46 arrival, 15:48 return). About an hour each way.</div></div></div>
+        <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-question">Can I book for a group?<span class="faq-arrow">▾</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. Book individual tickets through the booking page. For larger groups or private bookings, get in touch directly.</div></div></div>
       </div>
     </div>
   </section>
 
   <!-- 10. FINAL CTA -->
   <section class="final-cta">
-    <h2>Your day is waiting.</h2>
-    <p>Three vineyards. Twelve tastings. Lunch. Transport. £130.</p>
-    <a href="#tours" class="cta-primary">Book a Tour</a>
+    <h2>Your Sunday is waiting.</h2>
+    <div class="tagline">12 wines. No designated driver required.</div>
+    <p>Three vineyards · Lunch · Transport · £130</p>
+    <a href="#tours" class="cta-primary">Book a Sunday</a>
   </section>
 
   <footer>
-    <div style="margin-bottom:24px;"><img src="assets/sussex-winelands.svg" alt="Sussex Winelands" style="height:48px;opacity:.7"></div>
+    <div style="margin-bottom:24px"><img src="assets/sussex-winelands.svg" alt="Sussex Winelands" style="height:48px;opacity:.7"></div>
     <div class="footer-links">
       <a href="https://www.instagram.com/rotherriverwine/" target="_blank">@rotherriverwine</a>
       <a href="https://www.instagram.com/rotherwinetriangle/" target="_blank">@rotherwinetriangle</a>
     </div>
-    <p>Rother Wine Triangle &middot; East Sussex, England</p>
-    <p style="margin-top:8px">Train from London Charing Cross or London Bridge to Robertsbridge &middot; Just over an hour</p>
+    <p>Rother Wine Triangle · East Sussex, England</p>
+    <p style="margin-top:8px">Train from London Charing Cross or London Bridge to Robertsbridge · Just over an hour</p>
   </footer>
 
 </body>
