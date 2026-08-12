@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Rother Wine Triangle Bus Tour</title>
+  <meta name="description" content="The Rother Wine Triangle brings together six award-winning vineyards in East Sussex's Rother Valley. Meet the estates and the winemakers behind your Sunday.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--teal:#015B64;--teal-dark:#014850;--gold:#C4A35A;--gold-light:#D4B76A;--cream:#FAF7F2;--warm:#F0EBE3;--charcoal:#2C2C2C;--green:#2D4A3E;--muted:#7A7468;--border:#E0D8CC}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;color:var(--charcoal);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(1,91,100,.95);backdrop-filter:blur(10px);padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+    nav .logo{font-family:'Cormorant Garamond',serif;color:white;font-size:19px;font-weight:700;letter-spacing:1px;text-decoration:none}
+    nav .logo span{color:var(--gold)}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-link{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:500;transition:color .3s}
+    .nav-link:hover{color:white}
+    nav .cta-nav{background:var(--gold);color:white;text-decoration:none;padding:10px 24px;font-size:14px;font-weight:600;letter-spacing:.5px;transition:background .3s}
+    nav .cta-nav:hover{background:var(--gold-light)}
+
+    .page-hero{background:linear-gradient(rgba(1,72,80,.75),rgba(45,74,62,.8)),url('../assets/oxney-estate.jpg') center/cover;padding:120px 24px 80px;text-align:center}
+    .page-hero-inner{max-width:700px;margin:0 auto}
+    .page-eyebrow{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500}
+    .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,52px);color:white;font-weight:400;line-height:1.2;margin-bottom:20px}
+    .page-hero-sub{font-size:17px;color:rgba(255,255,255,.65);max-width:550px;margin:0 auto;line-height:1.7}
+
+    .container{max-width:800px;margin:0 auto}
+    section{padding:80px 24px}
+    .section-eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:500}
+
+    /* STORY */
+    .story-section{background:white;padding:80px 24px}
+    .story-text{font-size:17px;color:var(--charcoal);line-height:1.8;max-width:700px;margin:0 auto}
+    .story-text p{margin-bottom:24px}
+    .story-text .highlight{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--teal);line-height:1.5;margin:40px 0;padding:24px 0 24px 24px;border-left:3px solid var(--gold)}
+
+    /* PRESS STRIP */
+    .press-strip{background:var(--warm);padding:40px 24px;text-align:center}
+    .press-logos{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap}
+    .press-logos img{height:32px;opacity:.5}
+
+    /* VINEYARDS */
+    .vineyards-about{background:var(--cream);padding:80px 24px}
+    .vineyards-about-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,44px);color:var(--teal);text-align:center;margin-bottom:12px}
+    .vineyards-about-sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:56px}
+    .vineyard-profile{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--border);max-width:1000px;margin-left:auto;margin-right:auto}
+    .vineyard-profile:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .vineyard-profile:nth-child(even){direction:rtl}
+    .vineyard-profile:nth-child(even) > *{direction:ltr}
+    .vineyard-profile img{width:100%;height:320px;object-fit:cover}
+    .vineyard-profile-name{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--teal);margin-bottom:4px}
+    .vineyard-profile-loc{font-size:12px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+    .vineyard-profile-body{font-size:15px;color:var(--muted);line-height:1.7}
+    .vineyard-profile-body p{margin-bottom:12px}
+    .vineyard-profile-detail{font-size:14px;color:var(--teal);font-weight:600;padding:10px 14px;background:rgba(1,91,100,.06);border-left:3px solid var(--gold);margin-top:16px}
+
+    /* CTA */
+    .cta-primary{display:inline-block;background:var(--gold);color:white;text-decoration:none;padding:18px 48px;font-size:16px;font-weight:600;letter-spacing:1px;transition:all .3s}
+    .cta-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+    .page-cta{background:linear-gradient(160deg,var(--teal) 0%,var(--green) 100%);text-align:center;padding:80px 24px}
+    .page-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);color:white;margin-bottom:8px}
+    .page-cta .tagline{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);font-style:italic;margin-bottom:28px}
+
+    .back-link{display:block;text-align:center;padding:24px;font-size:14px;color:var(--teal);text-decoration:none;background:white;border-top:1px solid var(--border)}
+    .back-link:hover{color:var(--gold)}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.5);padding:32px 24px;text-align:center;font-size:13px}
+    footer a{color:var(--gold);text-decoration:none}
+
+    @media(max-width:768px){
+      section{padding:60px 20px}
+      .vineyard-profile{grid-template-columns:1fr;gap:24px}
+      .vineyard-profile:nth-child(even){direction:ltr}
+      .vineyard-profile img{height:240px}
+      nav .nav-links .nav-link{display:none}
+      nav .logo{font-size:15px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta-primary:hover{transform:none}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../" class="logo">Rother <span>Wine Triangle</span></a>
+    <div class="nav-links">
+      <a href="../getting-there/" class="nav-link">Getting There</a>
+      <a href="../#tours" class="cta-nav">Book a Sunday</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow">About</div>
+      <h1>Six vineyards. One valley. A very good day out.</h1>
+      <p class="page-hero-sub">The Rother Wine Triangle brings together six of East Sussex's finest vineyards into one effortless Sunday experience.</p>
+    </div>
+  </section>
+
+  <!-- THE STORY -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-text">
+        <p>The Rother Valley runs through a quiet corner of East Sussex between the medieval town of Rye and the countryside around Robertsbridge. It doesn't look like wine country. There are no grand chateaux, no tourist coaches, no signs telling you you've arrived. But the low-lying landscape creates a warm microclimate with some of the highest sunshine hours in England, and the result — over the last two decades — has been an extraordinary concentration of award-winning vineyards in a very small area.</p>
+
+        <div class="highlight">Sussex now holds the UK's first wine-specific Protected Designation of Origin — the same status as Champagne.</div>
+
+        <p>Six vineyards sit within a few miles of each other along the river. Organic pioneers. Natural winemakers. Family estates. Between them they grow over 30 grape varieties and produce everything from classic English sparkling to still Pinot Noirs that are changing what people think English wine can be.</p>
+
+        <p>The Rother Wine Triangle bus tour was created to make this region accessible. Three vineyards. Twelve tastings. Lunch with wine pairings. A luxury bus between every stop. Station pickup and dropoff. All for £130. You catch the train from London, we do everything else.</p>
+
+        <p>Each Sunday visits a different combination of three vineyards, so no two tours are the same. The winemakers guide every tasting themselves. Lunch changes with the vineyard and the season. And if you find a wine you love, buy six bottles at any vineyard and they'll ship them home for free.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <div class="press-strip">
+    <div class="press-logos">
+      <img src="../assets/the-times-logo.png" alt="The Times" loading="lazy">
+      <img src="../assets/cityam-logo.png" alt="City AM" loading="lazy">
+    </div>
+  </div>
+
+  <!-- THE VINEYARDS -->
+  <section class="vineyards-about">
+    <div class="section-eyebrow" style="text-align:center">Meet the vineyards</div>
+    <div class="vineyards-about-title">The six estates</div>
+    <div class="vineyards-about-sub">You'll visit three each Sunday. Here's who you might meet.</div>
+
+    <div class="vineyard-profile">
+      <img src="../assets/oxney.jpg" alt="Oxney Estate" loading="lazy">
+      <div>
+        <div class="vineyard-profile-name">Oxney Estate</div>
+        <div class="vineyard-profile-loc">Beckley, near Rye</div>
+        <div class="vineyard-profile-body">
+          <p>England's largest single-estate organic vineyard. 35 acres of vines surrounding a Grade II listed oast house winery. Kristin Syltevik left a career in tech PR to build one of the most respected organic wine operations in the country.</p>
+          <p>The Times has called Tillingham and Oxney two of the most exciting wine destinations in Sussex. Accommodation includes shepherd's huts in the vineyard.</p>
+        </div>
+        <div class="vineyard-profile-detail">Organic · 35 acres · Sparkling, white, rosé and red wines</div>
+        <a href="https://www.oxneyestate.com/" target="_blank" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--teal);text-decoration:none;font-weight:600">oxneyestate.com →</a>
+      </div>
+    </div>
+
+    <div class="vineyard-profile">
+      <img src="../assets/oastbrook.jpg" alt="Oastbrook Estate" loading="lazy">
+      <div>
+        <div class="vineyard-profile-name">Oastbrook Estate</div>
+        <div class="vineyard-profile-loc">Bodiam, near Robertsbridge</div>
+        <div class="vineyard-profile-body">
+          <p>A family-run vineyard built from scratch by Nick and America Brewer around a collection of oast houses on the Kent-Sussex border. Nick's introduction to wine came at eighteen when a friend in Beaune consoled him after a breakup with a bottle of Burgundy Pinot Noir. The revelation lasted.</p>
+          <p>City AM singled out their Pinot Noir Reserve as evidence that Sussex is now producing serious reds. Stay in the Hobbit House, the Avalon Waterside Lodge, or luxury bell tents in summer.</p>
+        </div>
+        <div class="vineyard-profile-detail">Award-winning Pinot Noir · Hobbit House · Voted one of the best wineries in Europe</div>
+        <a href="https://www.oastbrook.com/" target="_blank" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--teal);text-decoration:none;font-weight:600">oastbrook.com →</a>
+      </div>
+    </div>
+
+    <div class="vineyard-profile">
+      <img src="../assets/tillingham.jpg" alt="Tillingham" loading="lazy">
+      <div>
+        <div class="vineyard-profile-name">Tillingham</div>
+        <div class="vineyard-profile-loc">Peasmarsh</div>
+        <div class="vineyard-profile-body">
+          <p>A 70-acre working farm and biodynamic estate that has become the favourite weekend retreat for East Londoners. The Times called Tillingham one of the most exciting winemakers in Britain. Zero-sulphur wines fermented in Georgian qvevris, sourdough wood-fired pizzas, and a restaurant with vineyard views.</p>
+          <p>21 grape varieties. 11 rooms. A Michelin Green Star chef. Bell tents in summer. This is not your typical vineyard.</p>
+        </div>
+        <div class="vineyard-profile-detail">Natural · Biodynamic · 21 grape varieties · Restaurant and accommodation</div>
+        <a href="https://www.tillingham.com/" target="_blank" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--teal);text-decoration:none;font-weight:600">tillingham.com →</a>
+      </div>
+    </div>
+
+    <div class="vineyard-profile">
+      <img src="../assets/charles-palmer.jpg" alt="Charles Palmer" loading="lazy">
+      <div>
+        <div class="vineyard-profile-name">Charles Palmer</div>
+        <div class="vineyard-profile-loc">Near Hastings</div>
+        <div class="vineyard-profile-body">
+          <p>Home to some of the oldest vines in the Rother Valley, with a 5.0 rating on Google and a warm welcome that visitors talk about long after they leave. The views stretch across the valley to the sea.</p>
+          <p>Chantal Palmer was the first winemaker to publicly identify salinity and minerality as the defining characteristics of Rother Valley wines — a terroir story that's still being written.</p>
+        </div>
+        <div class="vineyard-profile-detail">Oldest vines in the valley · Sea views · 5.0 Google rating</div>
+        <a href="http://charlespalmer-vineyards.co.uk/" target="_blank" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--teal);text-decoration:none;font-weight:600">charlespalmer-vineyards.co.uk →</a>
+      </div>
+    </div>
+
+    <div class="vineyard-profile">
+      <img src="../assets/sedlescombe.jpg" alt="Sedlescombe" loading="lazy">
+      <div>
+        <div class="vineyard-profile-name">Sedlescombe</div>
+        <div class="vineyard-profile-loc">Near Battle</div>
+        <div class="vineyard-profile-body">
+          <p>England's oldest organic vineyard. Sedlescombe has been producing wine organically since before most English vineyards existed. Decades of craft and patience have produced wines with a depth and character that can only come from time.</p>
+          <p>The vineyard also hosts weddings, has a café, and offers accommodation at The Nest, a three-bedroom house set within the estate.</p>
+        </div>
+        <div class="vineyard-profile-detail">England's oldest organic vineyard · Café · Wedding venue · Accommodation</div>
+        <a href="https://sedlescombeorganic.com/" target="_blank" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--teal);text-decoration:none;font-weight:600">sedlescombeorganic.com →</a>
+      </div>
+    </div>
+
+    <div class="vineyard-profile">
+      <img src="../assets/mountfield.jpg" alt="Mountfield" loading="lazy">
+      <div>
+        <div class="vineyard-profile-name">Mountfield</div>
+        <div class="vineyard-profile-loc">Near Robertsbridge</div>
+        <div class="vineyard-profile-body">
+          <p>A stunning vineyard set against a beautiful country estate. Simon and Lucinda are deeply passionate about what they do and make time to chat with every guest. The wines are award-winning, the setting is one of the finest in Sussex, and the welcome is genuine.</p>
+        </div>
+        <div class="vineyard-profile-detail">Country estate · Award-winning wines · Intimate tastings</div>
+        <a href="https://www.mountfieldwinery.com/" target="_blank" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--teal);text-decoration:none;font-weight:600">mountfieldwinery.com →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="page-cta">
+    <h2>Your Sunday is waiting.</h2>
+    <div class="tagline">Three vineyards. Twelve tastings. No designated driver required.</div>
+    <a href="../#tours" class="cta-primary">Book a Sunday</a>
+  </section>
+
+  <a href="../" class="back-link">← Back to all tours</a>
+
+  <footer>
+    <p>Rother Wine Triangle · East Sussex · <a href="https://www.instagram.com/rotherriverwine/" target="_blank">@rotherriverwine</a></p>
+  </footer>
+
+</body>
+</html>
