@@ -58,7 +58,11 @@
     /* 3. VIDEO (unused position kept for reference) */
 
     /* 4. INCLUDES */
-    .includes-section{background:linear-gradient(rgba(250,247,242,.92),rgba(250,247,242,.95)),url('assets/oxney-estate.jpg') center/cover;padding:80px 24px}
+    .includes-section{background:var(--cream);padding:0}
+    .includes-wrap{display:grid;grid-template-columns:2fr 1fr;max-width:100%;margin:0 auto}
+    .includes-content{padding:80px 48px 80px 80px}
+    .includes-video{position:relative;overflow:hidden;min-height:500px}
+    .includes-video video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
     .includes-inner{max-width:1000px;margin:0 auto}
     .includes-section .section-eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;font-weight:500;text-align:center}
     .includes-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);color:var(--teal);margin-bottom:48px;text-align:center}
@@ -178,6 +182,9 @@
       .journey-line{width:2px;height:24px}
       .journey-stop{padding:8px 20px}
       .journey-stop.featured{padding:12px 24px}
+      .includes-wrap{grid-template-columns:1fr}
+      .includes-content{padding:60px 20px}
+      .includes-video{min-height:300px}
       .includes-hero{grid-template-columns:1fr}
       .inc-hero-item{border-right:none;border-bottom:1px solid var(--border);padding:32px 20px}
       .inc-hero-item:last-child{border-bottom:none}
@@ -280,42 +287,49 @@
 
   <!-- 4. YOUR £130 INCLUDES -->
   <section class="includes-section">
-    <div class="includes-inner">
-      <div class="includes-section section-eyebrow">Your £130 includes</div>
-      <div class="includes-title">We pick you up. We pour the wine. We get you home.</div>
-      <div class="includes-hero">
-        <div class="inc-hero-item">
-          <div class="inc-hero-num">3</div>
-          <div class="inc-hero-label">Vineyards</div>
-          <div class="inc-hero-desc">A different three every Sunday. Each with its own wines and its own welcome.</div>
+    <div class="includes-wrap">
+      <div class="includes-content">
+        <div class="includes-section section-eyebrow">Your £130 includes</div>
+        <div class="includes-title">We pick you up. We pour the wine. We get you home.</div>
+        <div class="includes-hero">
+          <div class="inc-hero-item">
+            <div class="inc-hero-num">3</div>
+            <div class="inc-hero-label">Vineyards</div>
+            <div class="inc-hero-desc">A different three every Sunday. Each with its own wines and its own welcome.</div>
+          </div>
+          <div class="inc-hero-item">
+            <div class="inc-hero-num">12</div>
+            <div class="inc-hero-label">Wines</div>
+            <div class="inc-hero-desc">Four at each vineyard. Poured and guided by the people who made them.</div>
+          </div>
+          <div class="inc-hero-item">
+            <div class="inc-hero-num">1</div>
+            <div class="inc-hero-label">Vineyard lunch</div>
+            <div class="inc-hero-desc">Local cheeses, charcuterie, seasonal produce. Paired with wine. Overlooking the vines.</div>
+          </div>
         </div>
-        <div class="inc-hero-item">
-          <div class="inc-hero-num">12</div>
-          <div class="inc-hero-label">Wines</div>
-          <div class="inc-hero-desc">Four at each vineyard. Poured and guided by the people who made them.</div>
-        </div>
-        <div class="inc-hero-item">
-          <div class="inc-hero-num">1</div>
-          <div class="inc-hero-label">Vineyard lunch</div>
-          <div class="inc-hero-desc">Local cheeses, charcuterie, seasonal produce. Paired with wine. Overlooking the vines.</div>
+        <div class="includes-extras">
+          <div class="inc-extra">
+            <div class="inc-extra-icon">🚌</div>
+            <div class="inc-extra-label">Private bus</div>
+            <div class="inc-extra-desc">Luxury, air-conditioned, between every stop</div>
+          </div>
+          <div class="inc-extra">
+            <div class="inc-extra-icon">🚉</div>
+            <div class="inc-extra-label">Station pickup</div>
+            <div class="inc-extra-desc">We meet you off the train and drop you back</div>
+          </div>
+          <div class="inc-extra">
+            <div class="inc-extra-icon">📦</div>
+            <div class="inc-extra-label">Free shipping</div>
+            <div class="inc-extra-desc">Buy 6+ bottles at any vineyard, shipped home free</div>
+          </div>
         </div>
       </div>
-      <div class="includes-extras">
-        <div class="inc-extra">
-          <div class="inc-extra-icon">🚌</div>
-          <div class="inc-extra-label">Private bus</div>
-          <div class="inc-extra-desc">Luxury, air-conditioned, between every stop</div>
-        </div>
-        <div class="inc-extra">
-          <div class="inc-extra-icon">🚉</div>
-          <div class="inc-extra-label">Station pickup</div>
-          <div class="inc-extra-desc">We meet you off the train and drop you back</div>
-        </div>
-        <div class="inc-extra">
-          <div class="inc-extra-icon">📦</div>
-          <div class="inc-extra-label">Free shipping</div>
-          <div class="inc-extra-desc">Buy 6+ bottles at any vineyard, shipped home free</div>
-        </div>
+      <div class="includes-video">
+        <video autoplay muted loop playsinline>
+          <source src="assets/tour-tasting.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
