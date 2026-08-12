@@ -50,18 +50,19 @@
     .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,48px);color:var(--teal);font-weight:400;line-height:1.2;margin-bottom:24px}
 
     /* VALUE */
-    .value-section{background:white;padding:80px 24px 60px}
-    .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);margin-bottom:48px}
-    .value-item{padding:28px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .value-item:nth-child(3n){border-right:none}
-    .value-item:nth-child(n+4){border-bottom:none}
-    .value-number{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--teal);line-height:1;margin-bottom:8px}
-    .value-label{font-size:15px;font-weight:600;color:var(--charcoal);margin-bottom:4px}
-    .value-desc{font-size:13px;color:var(--muted);line-height:1.5}
+    .value-section{background:var(--teal);padding:80px 24px}
+    .value-section .section-eyebrow{color:var(--gold)}
+    .value-section .section-title{color:white}
+    .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:48px}
+    .value-item{padding:40px 28px;background:rgba(255,255,255,.05);position:relative;transition:background .3s}
+    .value-item:hover{background:rgba(255,255,255,.1)}
+    .value-number{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:12px}
+    .value-label{font-size:16px;font-weight:600;color:white;margin-bottom:8px}
+    .value-desc{font-size:14px;color:rgba(255,255,255,.55);line-height:1.6}
     .journey-strip{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
     .journey-step{text-align:center;padding:0 16px}
-    .journey-step-label{font-size:13px;font-weight:600;color:var(--teal)}
-    .journey-step-desc{font-size:12px;color:var(--muted)}
+    .journey-step-label{font-size:13px;font-weight:600;color:var(--gold)}
+    .journey-step-desc{font-size:12px;color:rgba(255,255,255,.5)}
     .journey-arrow{color:var(--gold);font-size:18px}
 
     /* PRESS */
@@ -158,9 +159,6 @@
       .hero-content .cta-primary{display:none}
       .hero-video-wrap{min-height:400px}
       .value-grid{grid-template-columns:repeat(2,1fr)}
-      .value-item:nth-child(2n){border-right:none}
-      .value-item:nth-child(n+5){border-bottom:none}
-      .value-item:nth-child(4){border-bottom:1px solid var(--border)}
       .tour-card{flex-direction:column;align-items:flex-start}
       .tour-book{width:100%;text-align:center}
       .tour-buttons{width:100%;flex-direction:row}
@@ -176,8 +174,7 @@
     }
     @media(max-width:480px){
       .value-grid{grid-template-columns:1fr}
-      .value-item{border-right:none!important;border-bottom:1px solid var(--border)!important}
-      .value-item:last-child{border-bottom:none!important}
+      .value-item{padding:28px 24px}
     }
     @media(prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
@@ -232,33 +229,33 @@
       <div class="value-grid">
         <div class="value-item">
           <div class="value-number">3</div>
-          <div class="value-label">Award-winning vineyards</div>
-          <div class="value-desc">Each with its own character and wines</div>
+          <div class="value-label">Vineyards in one day</div>
+          <div class="value-desc">Three award-winning estates, each with its own wines, its own story, and its own welcome</div>
         </div>
         <div class="value-item">
           <div class="value-number">12</div>
-          <div class="value-label">Guided wine tastings</div>
-          <div class="value-desc">Four wines at each, guided by the winemakers</div>
+          <div class="value-label">Wines to taste</div>
+          <div class="value-desc">Four at each vineyard, poured and guided by the people who made them</div>
         </div>
         <div class="value-item">
-          <div class="value-number">1</div>
-          <div class="value-label">Locally sourced lunch</div>
-          <div class="value-desc">With wine pairings, overlooking the vines</div>
+          <div class="value-number">Lunch</div>
+          <div class="value-label">With wine pairings</div>
+          <div class="value-desc">A Sussex spread overlooking the vines. Local produce, English wines, no rush</div>
         </div>
         <div class="value-item">
-          <div class="value-number">&rarr;</div>
-          <div class="value-label">Luxury bus transport</div>
-          <div class="value-desc">Air-conditioned. No driving, no planning</div>
+          <div class="value-number">Bus</div>
+          <div class="value-label">Between every stop</div>
+          <div class="value-desc">Luxury, air-conditioned. Sit back and watch the Sussex countryside roll by</div>
         </div>
         <div class="value-item">
           <div class="value-number">1hr</div>
-          <div class="value-label">From London by train</div>
-          <div class="value-desc">Picked up and dropped off at the station</div>
+          <div class="value-label">From London</div>
+          <div class="value-desc">Train from Charing Cross. We meet you at the station. We drop you back at the end</div>
         </div>
         <div class="value-item">
-          <div class="value-number">6+</div>
-          <div class="value-label">Bottles shipped free</div>
-          <div class="value-desc">Buy six at any vineyard, they ship them home</div>
+          <div class="value-number">Free</div>
+          <div class="value-label">Wine shipping</div>
+          <div class="value-desc">Fall in love with a wine? Buy six bottles and they'll ship them home. No carrying</div>
         </div>
       </div>
       <div class="journey-strip">
@@ -271,7 +268,7 @@
         <div class="journey-step"><div class="journey-step-label">Home by teatime</div><div class="journey-step-desc">Dropped back at the station</div></div>
       </div>
       <div style="text-align:center;margin-top:24px">
-        <a href="getting-there/" style="color:var(--teal);font-size:14px;font-weight:500">Full travel details &rarr;</a>
+        <a href="getting-there/" style="color:var(--gold);font-size:14px;font-weight:500">Full travel details &rarr;</a>
       </div>
     </div>
   </section>
