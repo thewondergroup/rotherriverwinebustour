@@ -3,175 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rother Wine Triangle | Bus Tours Through Sussex Wine Country</title>
-  <meta name="description" content="Three vineyards. 12 tastings. One very good day in Sussex. Bus tours running every week, August to October. £130 per person, everything included.">
+  <title>Rother Wine Triangle Bus Tour | Sussex Wine Country</title>
+  <meta name="description" content="Three vineyards. 12 tastings. One very good day in Sussex. Bus tours every Sunday, August to October. £130 per person, everything included.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --teal: #015B64;
-      --teal-dark: #014850;
-      --gold: #C4A35A;
-      --gold-light: #D4B76A;
-      --cream: #FAF7F2;
-      --warm: #F0EBE3;
-      --charcoal: #2C2C2C;
-      --green: #2D4A3E;
-      --muted: #7A7468;
-      --border: #E0D8CC;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; color: var(--charcoal); background: var(--cream); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    :root { --teal:#015B64; --teal-dark:#014850; --gold:#C4A35A; --gold-light:#D4B76A; --cream:#FAF7F2; --warm:#F0EBE3; --charcoal:#2C2C2C; --green:#2D4A3E; --muted:#7A7468; --border:#E0D8CC; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;color:var(--charcoal);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
 
     /* NAV */
-    nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(1,91,100,0.95); backdrop-filter: blur(10px); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
-    nav .logo { font-family: 'Cormorant Garamond', serif; color: white; font-size: 20px; font-weight: 700; letter-spacing: 1px; }
-    nav .logo span { color: var(--gold); }
-    nav .cta-nav { background: var(--gold); color: white; text-decoration: none; padding: 10px 24px; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; transition: background 0.3s; }
-    nav .cta-nav:hover { background: var(--gold-light); }
+    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(1,91,100,0.95);backdrop-filter:blur(10px);padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+    nav .logo{font-family:'Cormorant Garamond',serif;color:white;font-size:19px;font-weight:700;letter-spacing:1px}
+    nav .logo span{color:var(--gold)}
+    nav .cta-nav{background:var(--gold);color:white;text-decoration:none;padding:10px 24px;font-size:14px;font-weight:600;letter-spacing:.5px;transition:background .3s}
+    nav .cta-nav:hover{background:var(--gold-light)}
 
     /* HERO */
-    .hero { min-height: 100vh; background: linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 40%, var(--green) 100%); display: flex; align-items: center; padding: 100px 24px 60px; }
-    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; width: 100%; }
-    .hero-video-wrap { position: relative; overflow: hidden; min-height: 500px; }
-    .hero-video-wrap video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-    .hero-eyebrow { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; font-weight: 500; }
-    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); color: white; font-weight: 400; line-height: 1.15; margin-bottom: 24px; }
-    .hero h1 em { font-style: italic; color: var(--gold); }
-    .hero-sub { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 520px; line-height: 1.7; margin-bottom: 36px; }
-    .hero-price { display: inline-flex; align-items: baseline; gap: 12px; border: 1px solid var(--gold); padding: 14px 36px; margin-bottom: 32px; }
-    .hero-price .amount { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: white; font-weight: 700; }
-    .hero-price .detail { font-size: 14px; color: var(--gold); letter-spacing: 1px; }
-    .hero-mobile-cta { display: none; }
-    .cta-primary { display: inline-block; background: var(--gold); color: white; text-decoration: none; padding: 18px 48px; font-size: 16px; font-weight: 600; letter-spacing: 1px; transition: all 0.3s; }
-    .cta-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .hero{min-height:100vh;background:linear-gradient(160deg,var(--teal) 0%,var(--teal-dark) 40%,var(--green) 100%);display:flex;align-items:center;padding:100px 24px 60px}
+    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;width:100%}
+    .hero-video-wrap{position:relative;overflow:hidden;min-height:500px}
+    .hero-video-wrap video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+    .hero-eyebrow{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:32px;font-weight:500}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);color:white;font-weight:400;line-height:1.15;margin-bottom:24px}
+    .hero h1 em{font-style:italic;color:var(--gold)}
+    .hero-sub{font-size:17px;color:rgba(255,255,255,.7);max-width:520px;line-height:1.7;margin-bottom:36px}
+    .hero-price{display:inline-flex;align-items:baseline;gap:12px;border:1px solid var(--gold);padding:14px 36px;margin-bottom:32px}
+    .hero-price .amount{font-family:'Cormorant Garamond',serif;font-size:44px;color:white;font-weight:700}
+    .hero-price .detail{font-size:14px;color:var(--gold);letter-spacing:1px}
+    .hero-mobile-cta{display:none}
+    .cta-primary{display:inline-block;background:var(--gold);color:white;text-decoration:none;padding:18px 48px;font-size:16px;font-weight:600;letter-spacing:1px;transition:all .3s}
+    .cta-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+
+    /* URGENCY BANNER */
+    .urgency-banner{background:var(--gold);padding:16px 24px;text-align:center;display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap}
+    .urgency-text{font-family:'Cormorant Garamond',serif;font-size:22px;color:white;font-weight:600}
+    .urgency-cta{background:var(--teal);color:white;text-decoration:none;padding:10px 28px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:background .3s}
+    .urgency-cta:hover{background:var(--teal-dark)}
 
     /* SECTIONS */
-    section { padding: 80px 24px; }
-    .container { max-width: 1100px; margin: 0 auto; }
-    .section-eyebrow { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; font-weight: 500; }
-    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 48px); color: var(--teal); font-weight: 400; line-height: 1.2; margin-bottom: 24px; }
+    section{padding:80px 24px}
+    .container{max-width:1100px;margin:0 auto}
+    .section-eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:500}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,48px);color:var(--teal);font-weight:400;line-height:1.2;margin-bottom:24px}
 
-    /* COMBINED VALUE SECTION */
-    .value-section { background: white; padding: 80px 24px 60px; }
-    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--border); margin-bottom: 48px; }
-    .value-item { padding: 28px 24px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .value-item:nth-child(3n) { border-right: none; }
-    .value-item:nth-child(n+4) { border-bottom: none; }
-    .value-number { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--teal); line-height: 1; margin-bottom: 8px; }
-    .value-label { font-size: 15px; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; }
-    .value-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
-
-    .journey-strip { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .journey-step { text-align: center; padding: 0 16px; }
-    .journey-step-label { font-size: 13px; font-weight: 600; color: var(--teal); }
-    .journey-step-desc { font-size: 12px; color: var(--muted); }
-    .journey-arrow { color: var(--gold); font-size: 18px; }
-
-    /* VIDEO BREAK */
-    .video-break { background: var(--charcoal); padding: 40px 24px; }
-    .video-break-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .video-break video { width: 100%; aspect-ratio: 9/16; object-fit: cover; background: black; }
-
-    /* TOURS */
-    .tours-section { background: var(--teal); color: white; padding: 80px 24px; }
-    .tours-section .section-eyebrow { color: var(--gold); }
-    .tours-section .section-title { color: white; }
-    .tour-month { margin-bottom: 32px; }
-    .tour-month-label { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--gold); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(196,163,90,0.3); }
-    .tour-card { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; gap: 12px; }
-    .tour-date { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; min-width: 120px; }
-    .tour-route { flex: 1; font-size: 15px; color: rgba(255,255,255,0.75); min-width: 200px; }
-    .tour-station { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
-    .tour-book { display: inline-block; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; padding: 10px 28px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s; }
-    .tour-book:hover { background: var(--gold); color: white; }
-
-    /* VINEYARDS */
-    .vineyards-section { background: white; padding: 80px 24px; }
-    .vineyard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
-    .vineyard-card { border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s; }
-    .vineyard-card:hover { transform: translateY(-4px); }
-    .vineyard-img { width: 100%; height: 220px; object-fit: cover; }
-    .vineyard-card-body { padding: 20px 24px 24px; }
-    .vineyard-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--teal); margin-bottom: 2px; }
-    .vineyard-location { font-size: 12px; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
-    .vineyard-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
-
-    /* REVIEWS */
-    .reviews-section { background: var(--warm); padding: 80px 24px; }
-    .reviews-section .section-title { color: var(--teal); }
-    .reviews-scroll { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 12px; }
-    .reviews-scroll::-webkit-scrollbar { height: 4px; }
-    .reviews-scroll::-webkit-scrollbar-track { background: var(--border); }
-    .reviews-scroll::-webkit-scrollbar-thumb { background: var(--gold); }
-    .review-card { flex: 0 0 240px; scroll-snap-align: start; }
-    .review-card video { width: 240px; height: 426px; object-fit: cover; background: black; }
+    /* VALUE */
+    .value-section{background:white;padding:80px 24px 60px}
+    .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);margin-bottom:48px}
+    .value-item{padding:28px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .value-item:nth-child(3n){border-right:none}
+    .value-item:nth-child(n+4){border-bottom:none}
+    .value-number{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--teal);line-height:1;margin-bottom:8px}
+    .value-label{font-size:15px;font-weight:600;color:var(--charcoal);margin-bottom:4px}
+    .value-desc{font-size:13px;color:var(--muted);line-height:1.5}
+    .journey-strip{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
+    .journey-step{text-align:center;padding:0 16px}
+    .journey-step-label{font-size:13px;font-weight:600;color:var(--teal)}
+    .journey-step-desc{font-size:12px;color:var(--muted)}
+    .journey-arrow{color:var(--gold);font-size:18px}
 
     /* PRESS */
-    .press-section { background: var(--warm); text-align: center; padding: 48px 24px; }
-    .press-bar { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
-    .press-item { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 380px; }
-    .press-logo { height: 40px; opacity: 0.7; }
-    .press-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--charcoal); font-style: italic; line-height: 1.5; }
+    .press-section{background:var(--warm);text-align:center;padding:48px 24px}
+    .press-bar{display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;max-width:900px;margin:0 auto}
+    .press-item{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:380px}
+    .press-logo{height:40px;opacity:.7}
+    .press-text{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--charcoal);font-style:italic;line-height:1.5}
+
+    /* REVIEWS */
+    .reviews-section{background:var(--cream);padding:80px 24px}
+    .reviews-section .section-title{color:var(--teal)}
+    .reviews-scroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px}
+    .reviews-scroll::-webkit-scrollbar{height:4px}
+    .reviews-scroll::-webkit-scrollbar-track{background:var(--border)}
+    .reviews-scroll::-webkit-scrollbar-thumb{background:var(--gold)}
+    .review-card{flex:0 0 240px;scroll-snap-align:start}
+    .review-card video{width:240px;height:426px;object-fit:cover;background:black}
+
+    /* TOURS */
+    .tours-section{background:var(--teal);color:white;padding:80px 24px}
+    .tours-section .section-eyebrow{color:var(--gold)}
+    .tours-section .section-title{color:white}
+    .tour-month{margin-bottom:32px}
+    .tour-month-label{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(196,163,90,.3)}
+    .tour-card{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap;gap:12px}
+    .tour-date{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;min-width:120px}
+    .tour-route{flex:1;font-size:15px;color:rgba(255,255,255,.75);min-width:200px}
+    .tour-station{font-size:12px;color:rgba(255,255,255,.4);margin-top:2px}
+    .tour-book{display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:10px 28px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:all .3s}
+    .tour-book:hover{background:var(--gold);color:white}
+
+    /* VINEYARDS */
+    .vineyards-section{background:white;padding:80px 24px}
+    .vineyard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+    .vineyard-card{border:1px solid var(--border);overflow:hidden;transition:transform .3s}
+    .vineyard-card:hover{transform:translateY(-4px)}
+    .vineyard-img{width:100%;height:220px;object-fit:cover}
+    .vineyard-card-body{padding:20px 24px 24px}
+    .vineyard-name{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--teal);margin-bottom:2px}
+    .vineyard-location{font-size:12px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+    .vineyard-desc{font-size:14px;color:var(--muted);line-height:1.6}
+
+    /* VIDEO BREAK */
+    .video-break{background:var(--charcoal);padding:40px 24px}
+    .video-break-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .video-break video{width:100%;aspect-ratio:9/16;object-fit:cover;background:black}
 
     /* SHIPPING */
-    .shipping-strip { background: white; padding: 48px 24px; text-align: center; }
-    .shipping-strip h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--teal); margin-bottom: 8px; }
-    .shipping-strip p { font-size: 15px; color: var(--muted); max-width: 600px; margin: 0 auto; }
+    .shipping-strip{background:var(--warm);padding:48px 24px;text-align:center}
+    .shipping-strip h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--teal);margin-bottom:8px}
+    .shipping-strip p{font-size:15px;color:var(--muted);max-width:600px;margin:0 auto}
+
+    /* FAQ */
+    .faq-section{background:white;padding:80px 24px}
+    .faq-grid{max-width:800px;margin:0 auto}
+    .faq-item{border-bottom:1px solid var(--border);padding:24px 0;cursor:pointer}
+    .faq-question{display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:600;color:var(--charcoal)}
+    .faq-arrow{color:var(--gold);font-size:20px;transition:transform .3s}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:15px;color:var(--muted);line-height:1.7}
+    .faq-item.open .faq-answer{max-height:200px}
+    .faq-answer-inner{padding-top:16px}
 
     /* FINAL CTA */
-    .final-cta { background: linear-gradient(160deg, var(--teal) 0%, var(--green) 100%); text-align: center; padding: 100px 24px; }
-    .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 56px); color: white; font-weight: 400; margin-bottom: 16px; }
-    .final-cta p { color: rgba(255,255,255,0.65); font-size: 18px; margin-bottom: 40px; }
+    .final-cta{background:linear-gradient(160deg,var(--teal) 0%,var(--green) 100%);text-align:center;padding:100px 24px}
+    .final-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,56px);color:white;font-weight:400;margin-bottom:16px}
+    .final-cta p{color:rgba(255,255,255,.65);font-size:18px;margin-bottom:40px}
 
     /* FOOTER */
-    footer { background: var(--charcoal); color: rgba(255,255,255,0.5); padding: 48px 24px; text-align: center; font-size: 14px; }
-    footer a { color: var(--gold); text-decoration: none; }
-    footer .footer-links { margin-bottom: 24px; }
-    footer .footer-links a { margin: 0 16px; }
+    footer{background:var(--charcoal);color:rgba(255,255,255,.5);padding:48px 24px;text-align:center;font-size:14px}
+    footer a{color:var(--gold);text-decoration:none}
+    footer .footer-links{margin-bottom:24px}
+    footer .footer-links a{margin:0 16px}
 
     /* RESPONSIVE */
-    @media (max-width: 768px) {
-      section { padding: 60px 20px; }
-      .hero { min-height: auto; padding: 80px 20px 0; }
-      .hero-inner { grid-template-columns: 1fr; gap: 24px; text-align: center; }
-      .hero-inner .hero-content { order: 1; }
-      .hero-inner .hero-video-wrap { order: 2; margin: 0 -20px; min-height: 280px; }
-      .hero-mobile-cta { order: 3; text-align: center; padding: 20px 0 40px; }
-      .hero-eyebrow { margin-bottom: 16px; font-size: 11px; }
-      .hero h1 { font-size: 32px; margin-bottom: 16px; }
-      .hero h1 br { display: none; }
-      .hero-sub { display: none; }
-      .hero-price { margin-bottom: 0; padding: 10px 24px; }
-      .hero-price .amount { font-size: 36px; }
-      .hero-content .cta-primary { display: none; }
-      .hero-mobile-cta { display: block; order: 3; text-align: center; padding-top: 20px; }
-      .hero-mobile-cta .cta-primary { display: inline-block; width: 100%; padding: 16px; font-size: 15px; }
-      .hero-video-wrap { min-height: 300px; }
-      .hero-video-wrap video { max-height: 50vh; }
-      .value-grid { grid-template-columns: repeat(2, 1fr); }
-      .value-item:nth-child(2n) { border-right: none; }
-      .value-item:nth-child(n+5) { border-bottom: none; }
-      .value-item:nth-child(4) { border-bottom: 1px solid var(--border); }
-      .tour-card { flex-direction: column; align-items: flex-start; }
-      .tour-book { width: 100%; text-align: center; }
-      .vineyard-grid { grid-template-columns: 1fr; }
-      .video-break-inner { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-      nav .logo { font-size: 16px; }
-      nav .cta-nav { padding: 8px 16px; font-size: 13px; }
-      .journey-strip { flex-direction: column; gap: 8px; }
-      .journey-arrow { transform: rotate(90deg); }
+    @media(max-width:768px){
+      section{padding:60px 20px}
+      .hero{min-height:auto;padding:80px 20px 0}
+      .hero-inner{grid-template-columns:1fr;gap:24px;text-align:center}
+      .hero-inner .hero-content{order:1}
+      .hero-inner .hero-video-wrap{order:2;margin:0 -20px;min-height:280px}
+      .hero-mobile-cta{display:block;order:3;text-align:center;padding:20px 0 40px}
+      .hero-mobile-cta .cta-primary{display:inline-block;width:100%;padding:16px;font-size:15px}
+      .hero-eyebrow{margin-bottom:16px;font-size:11px}
+      .hero h1{font-size:32px;margin-bottom:16px}
+      .hero h1 br{display:none}
+      .hero-sub{display:none}
+      .hero-price{margin-bottom:0;padding:10px 24px}
+      .hero-price .amount{font-size:36px}
+      .hero-content .cta-primary{display:none}
+      .hero-video-wrap{min-height:280px}
+      .value-grid{grid-template-columns:repeat(2,1fr)}
+      .value-item:nth-child(2n){border-right:none}
+      .value-item:nth-child(n+5){border-bottom:none}
+      .value-item:nth-child(4){border-bottom:1px solid var(--border)}
+      .tour-card{flex-direction:column;align-items:flex-start}
+      .tour-book{width:100%;text-align:center}
+      .vineyard-grid{grid-template-columns:1fr}
+      .video-break-inner{grid-template-columns:repeat(3,1fr);gap:8px}
+      nav .logo{font-size:15px}
+      nav .cta-nav{padding:8px 16px;font-size:13px}
+      .journey-strip{flex-direction:column;gap:8px}
+      .journey-arrow{transform:rotate(90deg)}
+      .urgency-banner{flex-direction:column;gap:12px}
     }
-    @media (max-width: 480px) {
-      .value-grid { grid-template-columns: 1fr; }
-      .value-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
-      .value-item:last-child { border-bottom: none !important; }
+    @media(max-width:480px){
+      .value-grid{grid-template-columns:1fr}
+      .value-item{border-right:none!important;border-bottom:1px solid var(--border)!important}
+      .value-item:last-child{border-bottom:none!important}
     }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .vineyard-card:hover, .cta-primary:hover { transform: none; }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .vineyard-card:hover,.cta-primary:hover{transform:none}
     }
   </style>
 </head>
@@ -182,7 +186,7 @@
     <a href="#tours" class="cta-nav">Book a Tour</a>
   </nav>
 
-  <!-- HERO -->
+  <!-- 1. HERO -->
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-content">
@@ -207,7 +211,13 @@
     </div>
   </section>
 
-  <!-- WHAT YOU GET + HOW IT WORKS (combined) -->
+  <!-- URGENCY BANNER -->
+  <div class="urgency-banner">
+    <div class="urgency-text">Next tour: Sunday 16th August</div>
+    <a href="#tours" class="urgency-cta">Book Now</a>
+  </div>
+
+  <!-- 2. WHAT YOU GET -->
   <section class="value-section">
     <div class="container">
       <div class="section-eyebrow">What £130 gets you</div>
@@ -245,30 +255,18 @@
         </div>
       </div>
       <div class="journey-strip">
-        <div class="journey-step">
-          <div class="journey-step-label">Catch the train</div>
-          <div class="journey-step-desc">Charing Cross to Robertsbridge</div>
-        </div>
+        <div class="journey-step"><div class="journey-step-label">Catch the train</div><div class="journey-step-desc">Charing Cross to Robertsbridge</div></div>
         <div class="journey-arrow">&rarr;</div>
-        <div class="journey-step">
-          <div class="journey-step-label">We pick you up</div>
-          <div class="journey-step-desc">Step off, onto the bus</div>
-        </div>
+        <div class="journey-step"><div class="journey-step-label">We pick you up</div><div class="journey-step-desc">Step off, onto the bus</div></div>
         <div class="journey-arrow">&rarr;</div>
-        <div class="journey-step">
-          <div class="journey-step-label">Three vineyards</div>
-          <div class="journey-step-desc">Tastings, lunch, explore</div>
-        </div>
+        <div class="journey-step"><div class="journey-step-label">Three vineyards</div><div class="journey-step-desc">Tastings, lunch, explore</div></div>
         <div class="journey-arrow">&rarr;</div>
-        <div class="journey-step">
-          <div class="journey-step-label">Home by teatime</div>
-          <div class="journey-step-desc">Dropped back at the station</div>
-        </div>
+        <div class="journey-step"><div class="journey-step-label">Home by teatime</div><div class="journey-step-desc">Dropped back at the station</div></div>
       </div>
     </div>
   </section>
 
-  <!-- PRESS -->
+  <!-- 3. PRESS -->
   <section class="press-section">
     <div class="press-bar">
       <div class="press-item">
@@ -282,21 +280,31 @@
     </div>
   </section>
 
-  <!-- VIDEO BREAK - 3 short clips -->
-  <div class="video-break">
-    <div class="video-break-inner">
-      <video controls playsinline preload="metadata" poster="assets/tour-vines-poster.jpg"><source src="assets/tour-vines.mp4" type="video/mp4"></video>
-      <video controls playsinline preload="metadata" poster="assets/tour-tasting-poster.jpg"><source src="assets/tour-tasting.mp4" type="video/mp4"></video>
-      <video controls playsinline preload="metadata" poster="assets/tour-bus-poster.jpg"><source src="assets/tour-bus.mp4" type="video/mp4"></video>
+  <!-- 4. INFLUENCER REVIEWS (moved up) -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-eyebrow">Don't take our word for it</div>
+      <h2 class="section-title">Real guests. Real reactions.</h2>
     </div>
-  </div>
+    <div class="container">
+      <div class="reviews-scroll">
+        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-7-poster.jpg"><source src="assets/influencer-7.mp4" type="video/mp4"></video></div>
+        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-1-poster.jpg"><source src="assets/influencer-1.mp4" type="video/mp4"></video></div>
+        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-2-poster.jpg"><source src="assets/influencer-2.mp4" type="video/mp4"></video></div>
+        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-4-poster.jpg"><source src="assets/influencer-4.mp4" type="video/mp4"></video></div>
+        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-3-poster.jpg"><source src="assets/influencer-3.mp4" type="video/mp4"></video></div>
+        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-5-poster.jpg"><source src="assets/influencer-5.mp4" type="video/mp4"></video></div>
+        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-6-poster.jpg"><source src="assets/influencer-6.mp4" type="video/mp4"></video></div>
+      </div>
+    </div>
+  </section>
 
-  <!-- TOURS -->
+  <!-- 5. TOURS (moved up) -->
   <section class="tours-section" id="tours">
     <div class="container">
       <div class="section-eyebrow">Tours</div>
       <h2 class="section-title">Pick your date</h2>
-      <p style="font-size:16px; color:rgba(255,255,255,0.6); margin-bottom:40px; max-width:500px;">Tours run every Sunday, August to October. Each one visits three vineyards. Pick a date and book.</p>
+      <p style="font-size:16px;color:rgba(255,255,255,.6);margin-bottom:40px;max-width:500px;">Tours run every Sunday, August to October. Each one visits three vineyards.</p>
 
       <div class="tour-month">
         <div class="tour-month-label">August</div>
@@ -362,89 +370,80 @@
     </div>
   </section>
 
-  <!-- VINEYARDS -->
+  <!-- 6. VINEYARDS -->
   <section class="vineyards-section">
     <div class="container">
       <div class="section-eyebrow">The vineyards</div>
       <h2 class="section-title">Six estates. Six stories.</h2>
       <div class="vineyard-grid">
-        <div class="vineyard-card">
-          <img class="vineyard-img" src="assets/oxney.jpg" alt="Oxney Estate" loading="lazy">
-          <div class="vineyard-card-body">
-            <div class="vineyard-name">Oxney Estate</div>
-            <div class="vineyard-location">Beckley, near Rye</div>
-            <div class="vineyard-desc">England's largest single-estate organic vineyard. 35 acres of vines, a Grade II listed oast house winery, and shepherd's hut accommodation.</div>
-          </div>
-        </div>
-        <div class="vineyard-card">
-          <img class="vineyard-img" src="assets/oastbrook.jpg" alt="Oastbrook Estate" loading="lazy">
-          <div class="vineyard-card-body">
-            <div class="vineyard-name">Oastbrook Estate</div>
-            <div class="vineyard-location">Bodiam, near Robertsbridge</div>
-            <div class="vineyard-desc">A family-run vineyard renowned for its beautiful setting and exquisite wines. Stay in the Hobbit House or the Avalon Waterside Lodge.</div>
-          </div>
-        </div>
-        <div class="vineyard-card">
-          <img class="vineyard-img" src="assets/tillingham.jpg" alt="Tillingham" loading="lazy">
-          <div class="vineyard-card-body">
-            <div class="vineyard-name">Tillingham</div>
-            <div class="vineyard-location">Peasmarsh</div>
-            <div class="vineyard-desc">A historic estate farmed since the 13th century, making natural wines from 21 grape varieties. Restaurant, rooms, and bell tents.</div>
-          </div>
-        </div>
-        <div class="vineyard-card">
-          <img class="vineyard-img" src="assets/charles-palmer.jpg" alt="Charles Palmer" loading="lazy">
-          <div class="vineyard-card-body">
-            <div class="vineyard-name">Charles Palmer</div>
-            <div class="vineyard-location">Near Hastings</div>
-            <div class="vineyard-desc">Home to some of the oldest vines in the Rother Valley, with a warm welcome and stunning views to the sea.</div>
-          </div>
-        </div>
-        <div class="vineyard-card">
-          <img class="vineyard-img" src="assets/sedlescombe.jpg" alt="Sedlescombe" loading="lazy">
-          <div class="vineyard-card-body">
-            <div class="vineyard-name">Sedlescombe</div>
-            <div class="vineyard-location">Near Battle</div>
-            <div class="vineyard-desc">England's oldest organic vineyard. Decades of craft producing wines with character and depth.</div>
-          </div>
-        </div>
-        <div class="vineyard-card">
-          <img class="vineyard-img" src="assets/mountfield.jpg" alt="Mountfield" loading="lazy">
-          <div class="vineyard-card-body">
-            <div class="vineyard-name">Mountfield</div>
-            <div class="vineyard-location">Near Robertsbridge</div>
-            <div class="vineyard-desc">A stunning vineyard set against a beautiful country estate, making award-winning wines.</div>
-          </div>
-        </div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/oxney.jpg" alt="Oxney Estate" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Oxney Estate</div><div class="vineyard-location">Beckley, near Rye</div><div class="vineyard-desc">England's largest single-estate organic vineyard. 35 acres of vines, a Grade II listed oast house winery, and shepherd's hut accommodation.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/oastbrook.jpg" alt="Oastbrook Estate" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Oastbrook Estate</div><div class="vineyard-location">Bodiam, near Robertsbridge</div><div class="vineyard-desc">A family-run vineyard renowned for its beautiful setting and exquisite wines. Stay in the Hobbit House or the Avalon Waterside Lodge.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/tillingham.jpg" alt="Tillingham" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Tillingham</div><div class="vineyard-location">Peasmarsh</div><div class="vineyard-desc">A historic estate farmed since the 13th century, making natural wines from 21 grape varieties. Restaurant, rooms, and bell tents.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/charles-palmer.jpg" alt="Charles Palmer" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Charles Palmer</div><div class="vineyard-location">Near Hastings</div><div class="vineyard-desc">Home to some of the oldest vines in the Rother Valley, with a warm welcome and stunning views to the sea.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/sedlescombe.jpg" alt="Sedlescombe" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Sedlescombe</div><div class="vineyard-location">Near Battle</div><div class="vineyard-desc">England's oldest organic vineyard. Decades of craft producing wines with character and depth.</div></div></div>
+        <div class="vineyard-card"><img class="vineyard-img" src="assets/mountfield.jpg" alt="Mountfield" loading="lazy"><div class="vineyard-card-body"><div class="vineyard-name">Mountfield</div><div class="vineyard-location">Near Robertsbridge</div><div class="vineyard-desc">A stunning vineyard set against a beautiful country estate, making award-winning wines.</div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-eyebrow">Don't take our word for it</div>
-      <h2 class="section-title">Real guests. Real reactions.</h2>
+  <!-- 7. PROFESSIONAL VIDEOS (moved down) -->
+  <div class="video-break">
+    <div class="video-break-inner">
+      <video controls playsinline preload="metadata" poster="assets/tour-vines-poster.jpg"><source src="assets/tour-vines.mp4" type="video/mp4"></video>
+      <video controls playsinline preload="metadata" poster="assets/tour-tasting-poster.jpg"><source src="assets/tour-tasting.mp4" type="video/mp4"></video>
+      <video controls playsinline preload="metadata" poster="assets/tour-bus-poster.jpg"><source src="assets/tour-bus.mp4" type="video/mp4"></video>
     </div>
-    <div class="container">
-      <div class="reviews-scroll">
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-7-poster.jpg"><source src="assets/influencer-7.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-1-poster.jpg"><source src="assets/influencer-1.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-2-poster.jpg"><source src="assets/influencer-2.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-4-poster.jpg"><source src="assets/influencer-4.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-3-poster.jpg"><source src="assets/influencer-3.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-5-poster.jpg"><source src="assets/influencer-5.mp4" type="video/mp4"></video></div>
-        <div class="review-card"><video controls playsinline preload="metadata" poster="assets/influencer-6-poster.jpg"><source src="assets/influencer-6.mp4" type="video/mp4"></video></div>
-      </div>
-    </div>
-  </section>
+  </div>
 
+  <!-- 8. SHIPPING -->
   <div class="shipping-strip">
     <h3>Love the wine? We'll ship it home.</h3>
     <p>Buy six or more bottles at any vineyard on the tour and they'll ship them home for free. No lugging bottles on the train.</p>
   </div>
 
-  <!-- FINAL CTA -->
+  <!-- 9. FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-eyebrow">Questions</div>
+      <h2 class="section-title">Good to know</h2>
+      <div class="faq-grid">
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">What happens if it rains?<span class="faq-arrow">&#9662;</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">The tours run rain or shine. Tastings happen indoors at each vineyard, and the bus is air-conditioned. You might want to bring a jacket for vineyard walks, but a bit of English weather has never stopped anyone enjoying English wine.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">Do I need to know about wine?<span class="faq-arrow">&#9662;</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Not at all. The tastings are guided by the winemakers themselves, and they're used to welcoming everyone from complete beginners to serious collectors. Just come with curiosity.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">Can you cater for dietary requirements?<span class="faq-arrow">&#9662;</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Vegetarian and vegan options are available for the lunch. Please let us know any dietary requirements when you book and we'll make sure everything is sorted.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">Can I drive instead of taking the train?<span class="faq-arrow">&#9662;</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">The bus picks up and drops off at the station, so the train is the easiest option and means you can enjoy all 12 tastings. If you do drive, you can arrange to meet the bus at the first vineyard, but please contact us in advance.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">How many people are on each tour?<span class="faq-arrow">&#9662;</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Tours are kept to a comfortable group size so you get a personal experience at each vineyard. It's a great day for couples, friends, or groups.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">Can I buy wine on the tour?<span class="faq-arrow">&#9662;</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely. You can buy bottles at every vineyard you visit and carry them on the bus. If you buy six or more bottles at any single vineyard, they'll ship them all home for free.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">Can I book for a group?<span class="faq-arrow">&#9662;</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes, it's a great day out for groups. Just book individual tickets for each person through the booking page. For larger groups or private bookings, please get in touch directly.</div></div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">Which train do I need to catch?<span class="faq-arrow">&#9662;</span></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Most tours depart from Robertsbridge Station. Catch the train from London Charing Cross or London Bridge to Hastings, arriving at Robertsbridge at 11:05. The return train is at 16:08. One tour route departs from Rye Station instead, arriving at 10:46 with a 15:48 return.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FINAL CTA -->
   <section class="final-cta">
     <h2>Your day is waiting.</h2>
     <p>Three vineyards. Twelve tastings. Lunch. Transport. £130.</p>
@@ -452,15 +451,13 @@
   </section>
 
   <footer>
-    <div style="margin-bottom:24px;">
-      <img src="assets/sussex-winelands.svg" alt="Sussex Winelands" style="height:48px; opacity:0.7;">
-    </div>
+    <div style="margin-bottom:24px;"><img src="assets/sussex-winelands.svg" alt="Sussex Winelands" style="height:48px;opacity:.7"></div>
     <div class="footer-links">
       <a href="https://www.instagram.com/rotherriverwine/" target="_blank">@rotherriverwine</a>
       <a href="https://www.instagram.com/rotherwinetriangle/" target="_blank">@rotherwinetriangle</a>
     </div>
     <p>Rother Wine Triangle &middot; East Sussex, England</p>
-    <p style="margin-top:8px;">Train from London Charing Cross or London Bridge to Robertsbridge &middot; Just over an hour</p>
+    <p style="margin-top:8px">Train from London Charing Cross or London Bridge to Robertsbridge &middot; Just over an hour</p>
   </footer>
 
 </body>
