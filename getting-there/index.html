@@ -188,10 +188,38 @@
 
   <!-- MAP -->
   <section style="padding:0;background:var(--charcoal)">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d80000!2d0.58!3d50.96!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1svineyards+near+Robertsbridge+East+Sussex!5e0!3m2!1sen!2suk" 
-      width="100%" height="450" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <div id="map" style="width:100%;height:450px"></div>
+    <script>
+      var map = L.map('map',{scrollWheelZoom:false}).setView([50.965,0.58],11);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+        attribution:'&copy; OpenStreetMap contributors',maxZoom:18
+      }).addTo(map);
+
+      var vineIcon = L.divIcon({className:'',html:'<div style="background:#015B64;color:#C4A35A;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;border:2px solid #C4A35A;box-shadow:0 2px 6px rgba(0,0,0,.3)">🍷</div>',iconSize:[28,28],iconAnchor:[14,14]});
+      var stationIcon = L.divIcon({className:'',html:'<div style="background:#C4A35A;color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,.3)">🚂</div>',iconSize:[28,28],iconAnchor:[14,14]});
+
+      var vineyards = [
+        [50.9963,0.5232,'Oastbrook Estate','Family-run vineyard, Bodiam'],
+        [51.0008,0.6611,'Oxney Estate','England\'s largest organic vineyard'],
+        [50.9585,0.6777,'Tillingham','Natural wines, 21 grape varieties'],
+        [50.9166,0.6993,'Charles Palmer','Oldest vines in the valley'],
+        [50.9554,0.5269,'Sedlescombe','England\'s oldest organic vineyard'],
+        [50.9610,0.4704,'Mountfield','Country estate, award-winning wines']
+      ];
+      var stations = [
+        [50.9848,0.4689,'Robertsbridge Station','Charing Cross line · Arrive 11:05'],
+        [50.9523,0.7307,'Rye Station','St Pancras/Victoria line · Arrive 10:46']
+      ];
+
+      vineyards.forEach(function(v){
+        L.marker([v[0],v[1]],{icon:vineIcon}).addTo(map).bindPopup('<b style="color:#015B64">'+v[2]+'</b><br><span style="color:#7A7468;font-size:13px">'+v[3]+'</span>');
+      });
+      stations.forEach(function(s){
+        L.marker([s[0],s[1]],{icon:stationIcon}).addTo(map).bindPopup('<b style="color:#C4A35A">'+s[2]+'</b><br><span style="color:#7A7468;font-size:13px">'+s[3]+'</span>');
+      });
+    </script>
   </section>
 
   <!-- DRIVING -->
