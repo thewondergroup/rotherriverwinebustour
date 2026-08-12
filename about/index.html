@@ -24,11 +24,13 @@
     nav .cta-nav:hover{background:var(--gold-light)}
     .hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;margin-left:12px}
     .hamburger span{display:block;width:22px;height:2px;background:white;margin:5px 0;transition:all .3s}
-    .mobile-menu{display:none;position:fixed;top:54px;left:0;right:0;background:#014850;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease;z-index:99}
-    .mobile-menu.open{max-height:300px}
-    .mobile-menu a{display:block;color:rgba(255,255,255,.8);text-decoration:none;padding:16px 24px;font-size:15px;border-bottom:1px solid rgba(255,255,255,.08);transition:background .2s}
-    .mobile-menu a:hover{background:rgba(255,255,255,.05)}
-    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#014850;z-index:200;flex-direction:column;justify-content:center;align-items:center;opacity:0;transition:opacity .3s ease}
+    .mobile-menu.open{opacity:1}
+    .mobile-menu a{display:block;color:white;text-decoration:none;padding:16px 0;font-family:'Cormorant Garamond',serif;font-size:28px;text-align:center;transition:color .2s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .mobile-menu .menu-close{position:absolute;top:16px;right:20px;background:none;border:none;color:white;font-size:32px;cursor:pointer;padding:8px;line-height:1}
+    .mobile-menu .menu-close:hover{color:var(--gold)}
+    .mobile-menu .menu-divider{width:40px;height:1px;background:var(--gold);margin:8px auto}
 
     .page-hero{background:linear-gradient(rgba(1,72,80,.75),rgba(45,74,62,.8)),url('../assets/oxney-estate.jpg') center/cover;padding:120px 24px 80px;text-align:center}
     .page-hero-inner{max-width:700px;margin:0 auto}
@@ -85,9 +87,9 @@
       .vineyard-profile img{height:240px}
       nav .nav-links .nav-link{display:none}
       .hamburger{display:block}
-      .mobile-menu{display:block}
+      .mobile-menu{display:none}
       .hamburger{display:block}
-      .mobile-menu{display:block}
+      .mobile-menu{display:none}
       nav .logo{font-size:15px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta-primary:hover{transform:none}}
@@ -100,15 +102,20 @@
     <div class="nav-links">
       <a href="../about/" class="nav-link">About</a>
       <a href="../getting-there/" class="nav-link">Getting There</a>
-      <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+      <button class="hamburger" onclick="var m=document.querySelector('.mobile-menu');if(m.style.display==='flex'){m.classList.remove('open');setTimeout(function(){m.style.display='none'},300)}else{m.style.display='flex';setTimeout(function(){m.classList.add('open')},10)}" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
-      <a href="../#tours" class="cta-nav">Book a Tour</a>
+      <a href="../#tours" class="cta-nav"style="color:var(--gold)">Book a Tour</a>
     </div>
   </nav>
   <div class="mobile-menu">
+    <button class="menu-close" onclick="var m=document.querySelector('.mobile-menu');m.classList.remove('open');setTimeout(function(){m.style.display='none'},300)" aria-label="Close">&times;</button>
     <a href="../about/">About</a>
+    <div class="menu-divider"></div>
     <a href="../getting-there/">Getting There</a>
+    <div class="menu-divider"></div>
+    <a href="../#tours"style="color:var(--gold)">Book a Tour</a>
+    <div class="menu-divider"></div>
     <a href="https://www.instagram.com/rotherriverwine/" target="_blank">@rotherriverwine</a>
   </div>
 
