@@ -18,6 +18,9 @@
     nav .logo span{color:var(--gold)}
     nav .cta-nav{background:var(--gold);color:white;text-decoration:none;padding:10px 24px;font-size:14px;font-weight:600;letter-spacing:.5px;transition:background .3s}
     nav .cta-nav:hover{background:var(--gold-light)}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-link{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:500;transition:color .3s}
+    .nav-link:hover{color:white}
     .route-hero{background:linear-gradient(160deg,var(--teal) 0%,var(--green) 100%);padding:120px 24px 80px;text-align:center}
     .route-hero-inner{max-width:800px;margin:0 auto}
     .route-eyebrow{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500}
@@ -68,6 +71,9 @@
       .stop-img{height:240px}
       .route-meta{gap:20px}
       .train-details{gap:24px}
+      nav .nav-links .nav-link{display:none}
+      .hamburger{display:block}
+      .mobile-menu{display:none}
       nav .logo{font-size:15px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta-primary:hover{transform:none}}
@@ -77,8 +83,25 @@
 
   <nav>
     <a href="../" class="logo"><img src="../assets/rother-logo-white.png" alt="Rother Wine Triangle" style="height:36px;vertical-align:middle"></a>
-    <a href="https://rotherwinetriangle.securedirectbookings.com/mountfield-oastbrook-estate-oxney-estate-pP31H08.html" class="cta-nav" target="_blank">Book This Tour</a>
+        <div class="nav-links">
+      <a href="../about/" class="nav-link">About</a>
+      <a href="../getting-there/" class="nav-link">Getting There</a>
+      <button class="hamburger" onclick="var m=document.querySelector('.mobile-menu');if(m.style.display==='flex'){m.classList.remove('open');setTimeout(function(){m.style.display='none'},300)}else{m.style.display='flex';setTimeout(function(){m.classList.add('open')},10)}" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="../#tours" class="cta-nav">Book a Tour</a>
+    </div>
   </nav>
+  <div class="mobile-menu">
+    <button class="menu-close" onclick="var m=document.querySelector('.mobile-menu');m.classList.remove('open');setTimeout(function(){m.style.display='none'},300)" aria-label="Close">&times;</button>
+    <a href="../about/">About</a>
+    <div class="menu-divider"></div>
+    <a href="../getting-there/">Getting There</a>
+    <div class="menu-divider"></div>
+    <a href="../#tours" style="color:var(--gold)">Book a Tour</a>
+    <div class="menu-divider"></div>
+    <a href="https://www.instagram.com/rotherriverwine/" target="_blank">@rotherriverwine</a>
+  </div>
 
   <section class="route-hero" style="background:linear-gradient(rgba(1,72,80,0.75),rgba(45,74,62,0.8)),url(../assets/mountfield.jpg) center/cover">
     <div class="route-hero-inner">
