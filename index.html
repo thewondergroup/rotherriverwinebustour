@@ -42,30 +42,37 @@
     .hero-mobile-cta{display:none}
 
     /* 2. JOURNEY PROPOSITION */
-    .journey-section{background:white;padding:60px 24px;text-align:center}
-    .journey-flow{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;max-width:900px;margin:0 auto 20px}
-    .journey-node{font-size:15px;font-weight:600;color:var(--teal);padding:12px 20px;background:var(--cream);border-radius:0}
-    .journey-node.highlight{background:var(--teal);color:white;padding:16px 24px;font-size:16px}
-    .journey-arr{color:var(--gold);font-size:16px}
-    .journey-note{font-size:14px;color:var(--muted);max-width:500px;margin:0 auto}
+    .journey-section{background:white;padding:60px 24px}
+    .journey-inner{max-width:900px;margin:0 auto}
+    .journey-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.5vw,32px);color:var(--teal);text-align:center;margin-bottom:40px}
+    .journey-track{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:24px}
+    .journey-stop{text-align:center;flex:0 0 auto;position:relative;padding:0 20px}
+    .journey-stop-label{font-size:15px;font-weight:600;color:var(--teal)}
+    .journey-stop-sub{font-size:12px;color:var(--muted);margin-top:2px}
+    .journey-stop.featured{background:var(--teal);padding:16px 28px;color:white}
+    .journey-stop.featured .journey-stop-label{color:var(--gold);font-size:16px}
+    .journey-stop.featured .journey-stop-sub{color:rgba(255,255,255,.6)}
+    .journey-line{width:40px;height:2px;background:var(--gold);flex-shrink:0}
+    .journey-note{font-size:14px;color:var(--muted);max-width:500px;margin:0 auto;text-align:center}
 
-    /* 3. VIDEO */
-    .video-full{background:black;padding:0}
-    .video-full video{width:100%;max-height:70vh;display:block;margin:0 auto;object-fit:cover}
+    /* 3. VIDEO (unused position kept for reference) */
 
     /* 4. INCLUDES */
-    .includes-section{background:var(--cream);padding:80px 24px}
-    .includes-section .section-eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;font-weight:500}
-    .includes-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,44px);color:var(--teal);margin-bottom:48px}
-    .includes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1100px;margin:0 auto 40px}
-    .inc-item{text-align:center;padding:32px 20px}
-    .inc-number{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:700;color:var(--teal);line-height:1;margin-bottom:8px}
-    .inc-label{font-size:16px;font-weight:600;color:var(--charcoal);margin-bottom:8px}
-    .inc-desc{font-size:14px;color:var(--muted);line-height:1.6}
-    .includes-bottom{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:32px;border-top:1px solid var(--border);max-width:800px;margin:0 auto}
-    .inc-small{text-align:center}
-    .inc-small-label{font-size:14px;font-weight:600;color:var(--teal)}
-    .inc-small-desc{font-size:13px;color:var(--muted)}
+    .includes-section{background:linear-gradient(rgba(250,247,242,.92),rgba(250,247,242,.95)),url('assets/oxney-estate.jpg') center/cover;padding:80px 24px}
+    .includes-inner{max-width:1000px;margin:0 auto}
+    .includes-section .section-eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;font-weight:500;text-align:center}
+    .includes-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);color:var(--teal);margin-bottom:48px;text-align:center}
+    .includes-hero{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-bottom:32px}
+    .inc-hero-item{text-align:center;padding:40px 24px;border-right:1px solid var(--border);position:relative}
+    .inc-hero-item:last-child{border-right:none}
+    .inc-hero-num{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:700;color:var(--teal);line-height:1;margin-bottom:4px}
+    .inc-hero-label{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--charcoal);margin-bottom:8px}
+    .inc-hero-desc{font-size:14px;color:var(--muted);line-height:1.6;max-width:260px;margin:0 auto}
+    .includes-extras{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);padding-top:28px}
+    .inc-extra{text-align:center;padding:16px 12px}
+    .inc-extra-icon{font-size:24px;margin-bottom:8px}
+    .inc-extra-label{font-size:14px;font-weight:600;color:var(--teal);margin-bottom:4px}
+    .inc-extra-desc{font-size:13px;color:var(--muted)}
 
     /* 5. DATES */
     .dates-section{background:var(--teal);color:white;padding:80px 24px}
@@ -167,10 +174,14 @@
       .hero-price-row{justify-content:center}
       .hero-price{font-size:36px}
       .hero-content .cta-primary{display:none}
-      .journey-flow{flex-direction:column;gap:4px}
-      .journey-arr{transform:rotate(90deg)}
-      .includes-grid{grid-template-columns:1fr}
-      .includes-bottom{flex-direction:column;gap:24px}
+      .journey-track{flex-direction:column;gap:0}
+      .journey-line{width:2px;height:24px}
+      .journey-stop{padding:8px 20px}
+      .journey-stop.featured{padding:12px 24px}
+      .includes-hero{grid-template-columns:1fr}
+      .inc-hero-item{border-right:none;border-bottom:1px solid var(--border);padding:32px 20px}
+      .inc-hero-item:last-child{border-bottom:none}
+      .includes-extras{grid-template-columns:1fr;gap:0}
       .date-cards{grid-template-columns:1fr}
       .date-card-actions{flex-direction:row}
       .date-book,.date-learn{flex:1;text-align:center}
@@ -181,8 +192,6 @@
       nav .logo{font-size:15px}
     }
     @media(max-width:480px){
-      .includes-grid{grid-template-columns:1fr}
-    }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta-primary:hover,.vineyard-card:hover{transform:none}}
   </style>
 </head>
@@ -223,17 +232,31 @@
 
   <!-- 2. JOURNEY -->
   <section class="journey-section">
-    <div class="journey-flow">
-      <div class="journey-node">London</div>
-      <div class="journey-arr">→</div>
-      <div class="journey-node">Robertsbridge</div>
-      <div class="journey-arr">→</div>
-      <div class="journey-node highlight">3 vineyards · lunch · 12 wines</div>
-      <div class="journey-arr">→</div>
-      <div class="journey-node">London</div>
+    <div class="journey-inner">
+      <div class="journey-headline">London to Sussex wine country and back. We do the rest.</div>
+      <div class="journey-track">
+        <div class="journey-stop">
+          <div class="journey-stop-label">London</div>
+          <div class="journey-stop-sub">Charing Cross</div>
+        </div>
+        <div class="journey-line"></div>
+        <div class="journey-stop">
+          <div class="journey-stop-label">Robertsbridge</div>
+          <div class="journey-stop-sub">1hr by train</div>
+        </div>
+        <div class="journey-line"></div>
+        <div class="journey-stop featured">
+          <div class="journey-stop-label">3 vineyards · lunch · 12 wines</div>
+          <div class="journey-stop-sub">Private bus between every stop</div>
+        </div>
+        <div class="journey-line"></div>
+        <div class="journey-stop">
+          <div class="journey-stop-label">London</div>
+          <div class="journey-stop-sub">Home by teatime</div>
+        </div>
+      </div>
+      <div class="journey-note">No driving. No planning. No designated driver required. <a href="getting-there/" style="color:var(--teal);font-weight:600;text-decoration:none">Full travel details →</a></div>
     </div>
-    <div class="journey-note">Train down. We do the rest. No driving. No planning. No designated driver required.</div>
-    <div style="margin-top:16px"><a href="getting-there/" style="color:var(--teal);font-size:14px;font-weight:600;text-decoration:none">Full travel details →</a></div>
   </section>
 
   <!-- 3. SOCIAL PROOF -->
@@ -257,30 +280,42 @@
 
   <!-- 4. YOUR £130 INCLUDES -->
   <section class="includes-section">
-    <div class="container" style="text-align:center">
+    <div class="includes-inner">
       <div class="includes-section section-eyebrow">Your £130 includes</div>
       <div class="includes-title">We pick you up. We pour the wine. We get you home.</div>
-      <div class="includes-grid">
-        <div class="inc-item">
-          <div class="inc-number">3</div>
-          <div class="inc-label">Vineyards</div>
-          <div class="inc-desc">A different three every Sunday. Each with its own wines and its own welcome.</div>
+      <div class="includes-hero">
+        <div class="inc-hero-item">
+          <div class="inc-hero-num">3</div>
+          <div class="inc-hero-label">Vineyards</div>
+          <div class="inc-hero-desc">A different three every Sunday. Each with its own wines and its own welcome.</div>
         </div>
-        <div class="inc-item">
-          <div class="inc-number">12</div>
-          <div class="inc-label">Wines</div>
-          <div class="inc-desc">Four at each vineyard. Poured and guided by the people who made them.</div>
+        <div class="inc-hero-item">
+          <div class="inc-hero-num">12</div>
+          <div class="inc-hero-label">Wines</div>
+          <div class="inc-hero-desc">Four at each vineyard. Poured and guided by the people who made them.</div>
         </div>
-        <div class="inc-item">
-          <div class="inc-number">Lunch</div>
-          <div class="inc-label">At the vineyard</div>
-          <div class="inc-desc">Local cheeses, charcuterie, seasonal produce. Paired with the wines. Overlooking the vines.</div>
+        <div class="inc-hero-item">
+          <div class="inc-hero-num">1</div>
+          <div class="inc-hero-label">Vineyard lunch</div>
+          <div class="inc-hero-desc">Local cheeses, charcuterie, seasonal produce. Paired with wine. Overlooking the vines.</div>
         </div>
       </div>
-      <div class="includes-bottom">
-        <div class="inc-small"><div class="inc-small-label">Private bus</div><div class="inc-small-desc">Luxury, air-conditioned, between every stop</div></div>
-        <div class="inc-small"><div class="inc-small-label">Station pickup</div><div class="inc-small-desc">We meet you off the train and drop you back</div></div>
-        <div class="inc-small"><div class="inc-small-label">Free shipping</div><div class="inc-small-desc">Buy 6+ bottles, they ship them home</div></div>
+      <div class="includes-extras">
+        <div class="inc-extra">
+          <div class="inc-extra-icon">🚌</div>
+          <div class="inc-extra-label">Private bus</div>
+          <div class="inc-extra-desc">Luxury, air-conditioned, between every stop</div>
+        </div>
+        <div class="inc-extra">
+          <div class="inc-extra-icon">🚉</div>
+          <div class="inc-extra-label">Station pickup</div>
+          <div class="inc-extra-desc">We meet you off the train and drop you back</div>
+        </div>
+        <div class="inc-extra">
+          <div class="inc-extra-icon">📦</div>
+          <div class="inc-extra-label">Free shipping</div>
+          <div class="inc-extra-desc">Buy 6+ bottles at any vineyard, shipped home free</div>
+        </div>
       </div>
     </div>
   </section>
