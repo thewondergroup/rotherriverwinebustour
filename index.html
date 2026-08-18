@@ -373,7 +373,7 @@
       <div class="dates-sub">Six vineyards. A different three every Sunday.</div>
 
       <div class="date-cards">
-        <div class="date-card">
+        <div class="date-card" data-date="2026-08-16">
           <div class="date-card-day">Sunday 16 August</div>
           <div class="date-card-route">Oxney × Tillingham × Sedlescombe</div>
           <div class="date-card-desc">Two organic pioneers and a natural winemaker with 21 grape varieties.</div>
@@ -383,7 +383,7 @@
             <a href="oxney-tillingham-sedlescombe/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-08-23">
           <div class="date-card-day">Sunday 23 August</div>
           <div class="date-card-route">Oastbrook × Oxney × Charles Palmer</div>
           <div class="date-card-desc">A family estate, England's largest organic vineyard, and views stretching to the sea.</div>
@@ -393,7 +393,7 @@
             <a href="oastbrook-oxney-charles-palmer/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-08-30">
           <div class="date-card-day">Sunday 30 August</div>
           <div class="date-card-route">Sedlescombe × Charles Palmer × Tillingham</div>
           <div class="date-card-desc">England's oldest organic vineyard, sea-view wines, and natural winemaking.</div>
@@ -403,7 +403,7 @@
             <a href="sedlescombe-charles-palmer-tillingham/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-09-06">
           <div class="date-card-day">Sunday 6 September</div>
           <div class="date-card-route">Oastbrook × Oxney × Charles Palmer</div>
           <div class="date-card-desc">A family estate, England's largest organic vineyard, and views stretching to the sea.</div>
@@ -413,7 +413,7 @@
             <a href="oastbrook-oxney-charles-palmer/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-09-13">
           <div class="date-card-day">Sunday 13 September</div>
           <div class="date-card-route">Oxney × Tillingham × Sedlescombe</div>
           <div class="date-card-desc">Two organic pioneers and a natural winemaker with 21 grape varieties.</div>
@@ -423,7 +423,7 @@
             <a href="oxney-tillingham-sedlescombe/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-09-20">
           <div class="date-card-day">Sunday 20 September</div>
           <div class="date-card-route">Charles Palmer × Sedlescombe × Oastbrook</div>
           <div class="date-card-desc">Sea views, England's oldest organic vineyard, and a fairytale estate. From Rye Station.</div>
@@ -433,7 +433,7 @@
             <a href="charles-palmer-sedlescombe-oastbrook/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-10-04">
           <div class="date-card-day">Sunday 4 October</div>
           <div class="date-card-route">Oxney × Tillingham × Sedlescombe</div>
           <div class="date-card-desc">Two organic pioneers and a natural winemaker. Autumn in the vineyard.</div>
@@ -443,7 +443,7 @@
             <a href="oxney-tillingham-sedlescombe/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-10-11">
           <div class="date-card-day">Sunday 11 October</div>
           <div class="date-card-route">Oxney × Tillingham × Sedlescombe</div>
           <div class="date-card-desc">Two organic pioneers and a natural winemaker. Autumn in the vineyard.</div>
@@ -453,7 +453,7 @@
             <a href="oxney-tillingham-sedlescombe/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-10-18">
           <div class="date-card-day">Sunday 18 October</div>
           <div class="date-card-route">Oastbrook × Oxney × Charles Palmer</div>
           <div class="date-card-desc">A family estate, England's largest organic vineyard, and views to the sea.</div>
@@ -463,7 +463,7 @@
             <a href="oastbrook-oxney-charles-palmer/" class="date-learn">Details</a>
           </div>
         </div>
-        <div class="date-card">
+        <div class="date-card" data-date="2026-10-25">
           <div class="date-card-day">Sunday 25 October</div>
           <div class="date-card-route">Sedlescombe × Charles Palmer × Tillingham</div>
           <div class="date-card-desc">England's oldest organic vineyard, sea-view wines, and natural winemaking. Last tour of the season.</div>
@@ -561,5 +561,16 @@
     <p style="margin-top:8px">Train from London Charing Cross or London Bridge to Robertsbridge · Just over an hour</p>
   </footer>
 
+
+  <script>
+    (function(){
+      var today = new Date();
+      today.setHours(23,59,59);
+      document.querySelectorAll('.date-card[data-date]').forEach(function(card){
+        var d = new Date(card.getAttribute('data-date') + 'T23:59:59');
+        if(d < today) card.style.display = 'none';
+      });
+    })();
+  </script>
 </body>
 </html>
